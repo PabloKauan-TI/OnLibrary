@@ -12,14 +12,18 @@
 
 <body>
     <div class="conatiner" id="login">
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="user">Username</span>
-            <input type="text" class="form-control" aria-describedby="user">
-        </div>
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="senha">Password</span>
-            <input type="text" class="form-control" aria-describedby="senha">
-        </div>
+        <form action="home.php" method="post">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="user">Username</span>
+                <input type="text" class="form-control" aria-describedby="user">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="senha">Password</span>
+                <input type="text" class="form-control" aria-describedby="senha">
+            </div>
+            <br>
+            <button type="submit" class="btn btn-warning">Entrar</button>
+        </form>
     </div>
 </body>
 
