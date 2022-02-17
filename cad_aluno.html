@@ -13,38 +13,48 @@
 <body>
     <header></header>
     <section class="container" id="um">
+        <br>
         <h4>Insira os dados abaixo!</h4>
         <br>
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="matricula">Matrícula</span>
-            <input type="text" class="form-control" aria-describedby="matricula">
-        </div>
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="nomealuno">Nome Comleto</span>
-            <input type="text" class="form-control" aria-describedby="nomealuno">
-        </div>
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="serie">Série</span>
-            <input type="text" class="form-control" aria-describedby="serie>
-        </div>
-        <div class=" input-group mb-3">
-            <span class="input-group-text" id="curso">Curso</span>
-            <input type="text" class="form-control" aria-describedby="curso">
-        </div>
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="email">E-mail</span>
-            <input type="text" class="form-control" aria-describedby="email">
-        </div>
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="tell">Telefone</span>
-            <input type="phone-number" class="form-control" aria-describedby="tell">
-        </div>
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="senha">Senha</span>
-            <input type="text" class="form-control" aria-describedby="senha">
-        </div>
-        <br>
-        <button class="btn btn-warning" type="submit">Cadastrar</button>
+        <form action="cadr_aluno" method="post">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="matricula">Matrícula</span>
+                <input type="text" class="form-control" aria-describedby="matricula">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="nomealuno">Nome Comleto</span>
+                <input type="text" class="form-control" aria-describedby="nomealuno">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="serie">Série</span>
+                <select class="form-select" aria-describediby="serie">
+                    <option selected>Selecione o ano</option>
+                    <option value="1">Primeiro</option>
+                    <option value="2">Segundo</option>
+                    <option value="3">Terceiro</option>
+                </select>
+                <span class="input-group-text" id="curso">Curso</span>
+                <select class="form-select" aria-describedby="curso">
+                    <option selected>Selecione o curso</option>
+                    <option value="Enfermagem">Enfermagem</option>
+                    <option value="Informática">Informática</option>
+                    <option value="Administração">Administração</option>
+                    <option value="Comercio">Comercio</option>
+                </select>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="email">E-mail</span>
+                <input type="text" class="form-control" aria-describedby="email">
+                <span class="input-group-text" id="tell">Telefone</span>
+                <input type="text" class="form-control" aria-describedby="tell">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="senha">Senha</span>
+                <input type="text" class="form-control" aria-describedby="senha">
+            </div>
+            <br>
+            <button class="btn btn-warning" type="submit">Cadastrar</button>
+        </form>
     </section>
 </body>
 
