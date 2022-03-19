@@ -6,17 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OnLibrary</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="assets/css/login.css">
 </head>
 
 <body>
-    <div class="container" id="login">
-        <p>Usuario</p>
-        <input type="text" name="user" id="user">
-        <p>Senha</p>
-        <input type="text" name="senha" id="senha">
-        <br>
-        <button type="submit">Entar</button>
+    <div class="header">
+        <div class="logo">
+            <a href="#"><img src="#" alt=""></a>
+        </div>
+    </div>
+
+    <div class="login_body">
+        <div class="login_box">
+            <h2>Entrar</h2>
+            <form">
+                <div class="input_box">
+                    <input required type="text" placeholder="Usuário">
+                </div>
+                <div class="input_box">
+                    <input required type="password" placeholder="Senha">
+                </div>
+                <div>
+                    <button type="submit">Entrar</button>
+                </div>
+            </form>
+
+            <div class="suport">
+                <div class="remenber">
+                    <span><input type="checkbox" style="margin: 0; padding: 0; height: 13px;"></span>
+                    <span>Lembre-se de mim</span>
+                </div>
+                <div class="login_footer">
+                    <p>Novo por aqui! <a href="#">Cadastre-se</a></p>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
