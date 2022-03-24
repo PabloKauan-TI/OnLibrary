@@ -4,15 +4,13 @@ body{
     height: 100vh;
     width: 100%;
     position: relative;
-    background-image: url(../img/estante.jpg);
-    background-image: cover;
-    /*background-repeat: no-repeat;*/
+    background-color: whitesmoke;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 body::before{
     content: '';
-    background-color: rgba(0, 0, 1, 0.501);
+    background-color: rgba(1, 1, 0, 0.501);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -29,8 +27,7 @@ body::before{
 
 .header{
     padding: 20px 50px;
-    position: relative;
-    z-index: 10;
+    /*position: relative;*/
 }
 
 .login_body{
@@ -40,7 +37,7 @@ body::before{
     max-width: 450px;
     height: 390px;
     margin-left: 50%;
-    background-color: rgba(0, 0, 1, 0.750);
+    background-color: rgba(51, 51, 51, 0.713);
     border-radius: 10px;
     box-sizing: border-box;
     transform: translateX(-50%);
@@ -48,7 +45,7 @@ body::before{
 
 .login_body h2{
     font-size: 32px;
-    color: white;
+    color:  #fff;
     margin-top: 0;
 }
 
@@ -65,7 +62,7 @@ body::before{
 }
 
 .login_body input:hover{
-    background-color: #444;
+    background-color: rgb(70, 63, 63);
 }
 
 .input_box{
@@ -74,10 +71,11 @@ body::before{
 
 .login_body button{
     height: 50px;
-    width: 100%;
+    width: 80%;
+    margin-left: 10%;
     color: #fff;
-    background-color: orange;
-    border-radius: 5px;
+    background-color: rgb(223, 151, 17);
+    border-radius: 150px;
     font-weight: bold;
     font-size: 16px;
     border: none;
@@ -100,28 +98,4 @@ body::before{
 .suport input{
     width: 15px;
     height: 15px;
-}
-
-.remenber{
-    display: flex;
-    align-items: center;
-}
-
-.remenber span{
-    margin-right: 5px;
-    height: 25px;
-}
-
-.login_footer a{
-    text-decoration: none;
-    color: #737373;
-}
-
-.login_footer a:hover{
-    text-decoration: underline;
-}
-
-.login_footer p{
-    margin: 0;
-    padding: 0;
 }
