@@ -1,7 +1,7 @@
 body{
     padding: 0;
     margin: 0;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     position: relative;
     background-color: whitesmoke;
@@ -18,4 +18,72 @@ body::before{
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+.logo img{
+    height: 45px;
+    width: 167px;
+}
+
+.header{
+    padding: 20px 50px;
+    /*position: relative;*/
+}
+
+.form_body{
+    position: relative;
+    z-index: 90;
+    max-width: 450px;
+    height: 600px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    padding: 70px;
+    background-color: rgba(51, 51, 51, 0.713);
+    border-radius: 50px;
+    bottom: 50px;
+}
+
+
+.form h2{
+    font-size: 25px;
+    color:  #fff;
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form input{
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 15px;
+}
+
+.form input:hover{
+    background-color: rgb(70, 63, 63);
+}
+
+.input_box{
+    margin-bottom: 15px;
+}
+
+.form button{
+    height: 50px;
+    width: 80%;
+    margin-left: 10%;
+    color: #fff;
+    background-color: rgb(223, 151, 17);
+    border-radius: 150px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.form button:hover{
+    background-color: rgb(255, 183, 3);
+    cursor: pointer;
 }
