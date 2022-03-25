@@ -25,9 +25,34 @@ body::before{
     width: 167px;
 }
 
+.logo{
+    width: 170px;
+    height: 50px;
+}
+
+.menu{
+    width: 280px;
+    height: 50px;
+    margin-right: 0%;
+    position: relative;
+    top: -42px;
+    left: 683px;
+}
+
 .header{
-    padding: 20px 50px;
-    /*position: relative;*/
+    padding: 3px 5px;
+    position: relative;
+    background-color: black;
+    color: #fff;
+}
+
+.header li{
+    display: inline-block;
+    padding: 8px 10px;
+}
+
+.header ul{
+    margin-top: 3px;
 }
 
 .form_body{
