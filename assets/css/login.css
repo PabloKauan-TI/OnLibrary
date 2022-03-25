@@ -26,8 +26,8 @@ body::before{
 }
 
 .header{
-    padding: 20px 50px;
-    /*position: relative;*/
+    padding:3px 5px;
+    position: relative;
 }
 
 .login_body{
@@ -37,10 +37,11 @@ body::before{
     max-width: 450px;
     height: 390px;
     margin-left: 50%;
+    margin-top: 10%;
     background-color: rgba(51, 51, 51, 0.713);
     border-radius: 10px;
     box-sizing: border-box;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(-10%);
 }
 
 .login_body h2{
