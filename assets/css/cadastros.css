@@ -22,7 +22,7 @@ body::before{
 
 #logo{
     width: 120px;
-    height: 30px;
+    height: 40px;
 }
 
 .menu{
@@ -32,12 +32,6 @@ body::before{
     position: relative;
     top: -42px;
     left: 683px;
-}
-
-navbar navbar-expand-lg navbar-dark bg-dark{
-    margin: 0px;
-    padding: 0%;
-    z-index: 100;
 }
 
 .header{
@@ -61,7 +55,7 @@ navbar navbar-expand-lg navbar-dark bg-dark{
     position: relative;
     z-index: 90;
     max-width: 450px;
-    height: 600px;
+    height: 750px;
     margin-left: 50%;
     margin-top: 15%;
     transform: translateX(-50%) translateY(-50px);
