@@ -1,43 +1,47 @@
-/*script do banco de dados*/
+/* bdonlibrary: */
+CREATE DATABASE onlibrary;
 
-CREATE TABLE cadlivro (
-    cod_livro int,
-    titulo_livro varchar(50),
-    autor_livro varchar(50),
-    quantidade_livro int(10),
-    data_empresta date,
-    data_devolucao date,
-    PRIMARY KEY (cod_livro)	
+CREATE TABLE cadbibliotecaria (
+    id_bibliotecaria INT AUTO_INCREMENT PRIMARY KEY,
+    nome_bibliotecaria VARCHAR(50),
+    endereco_bibliotecaria VARCHAR(50),
+    telefone_bibliotecaria INT(6),
+    email_bibliotecaria VARCHAR(50),
+    senha_bibliotecaria INT(6)
 );
 
 CREATE TABLE cadaluno (
-    nome_aluno varchar(50),
-    email_aluno varchar(50),
-    senha_aluno varchar(50),
-    telefone_aluno int(12),
-    endereco_aluno varchar(50),
-    curso_aluno varchar(50),
-    serie_aluno int(5),
-    matricula_aluno int, 
-    PRIMARY KEY (matricula_aluno)
+    matricula_aluno INT AUTO_INCREMENT  PRIMARY KEY,
+    nome_aluno VARCHAR(50),
+    email_aluno VARCHAR(50),
+    senha_aluno VARCHAR(50),
+    telefone_aluno INT(12),
+    endereco_aluno VARCHAR(50),
+    curso_aluno VARCHAR(50),
+    serie_aluno INT(6)
 );
 
-CREATE TABLE cadadm (
-    nome_adm varchar(50),
-    email_adm varchar(50),
-    senha_adm varchar(50),
-    telefone_adm int(12),
-    endereco_adm varchar(50),
-    PRIMARY KEY (nome_adm)
+CREATE TABLE cadlivro (
+    cod_livro INT AUTO_INCREMENT  PRIMARY KEY,
+    titulo_livro VARCHAR(50),
+    autor_livro VARCHAR(50),
+    qtd_livro INT(50),
+    dtemp_livro DATE,
+    dtdevo_livro DATE,
+    id_bibliotecaria INT(50)
 );
 
-CREATE TABLE emprestimo_livro (
-    cod_livro int,
-    titulo_livroo varchar(50),
-    aluno varchar(50),
-    serie int(5),
-    curso varchar(50),
-    data_emp date,
-    situacao varchar(50),
-    PRIMARY KEY (cod_livro)
+CREATE TABLE emprestimolivro (
+    cod_livro INT AUTO_INCREMENT PRIMARY KEY,
+    titulo_livro VARCHAR(50),
+    aluno VARCHAR(50),
+    serie INT(6),
+    curso VARCHAR(50),
+    data_emp DATE,
+    situacao VARCHAR(50)
 );
+ 
+ALTER TABLE cadlivro ADD CONSTRAINT FK_cadlivro_2
+    FOREIGN KEY (id_bibliotecaria)
+    REFERENCES cadbibliotecaria (id_bibliotecaria);
+
