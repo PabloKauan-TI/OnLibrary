@@ -20,14 +20,9 @@ body::before{
     right: 0;
 }
 
-.logo img{
-    height: 45px;
-    width: 167px;
-}
-
-.logo{
-    width: 170px;
-    height: 50px;
+#logo{
+    width: 120px;
+    height: 30px;
 }
 
 .menu{
@@ -37,6 +32,12 @@ body::before{
     position: relative;
     top: -42px;
     left: 683px;
+}
+
+navbar navbar-expand-lg navbar-dark bg-dark{
+    margin: 0px;
+    padding: 0%;
+    z-index: 100;
 }
 
 .header{
