@@ -12,89 +12,126 @@
 </head>
 
 <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="" id="logo"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Livros
-                            </a>
-                            <ul class="dropdown-menu  dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Catalago</a></li>
-                                <li><a class="dropdown-item" href="#">Emprestados</a></li>
-                                <li><a class="dropdown-item" href="#">Gerenciar</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Alunos
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Com Livros</a></li>
-                                <li><a class="dropdown-item" href="#">Gerenciar</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Admins
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Todos</a></li>
-                                <li><a class="dropdown-item" href="#">Gerenciar</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="" id="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Livros
+                        </a>
+                        <ul class="dropdown-menu  dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Catalago</a></li>
+                            <li><a class="dropdown-item" href="#">Emprestados</a></li>
+                            <li><a class="dropdown-item" href="#">Gerenciar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Alunos
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Com Livros</a></li>
+                            <li><a class="dropdown-item" href="#">Gerenciar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Admins
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Todos</a></li>
+                            <li><a class="dropdown-item" href="#">Gerenciar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="form">
+        <div class="container">
+            <fieldset>
+            <div class="row-1">
+                <legend>Cadastrar Usuário</legend>
+                <div class="mb-6">
+                    <label for="nome_aluno" class="form-label">Nome</label>
+                    <input type="text" id="nome_aluno" class="form-control" placeholder="Nome">
                 </div>
             </div>
-        </nav>
+            <div class="row-2">
+                <div class="col-mb-6">
+                    <label for="serie_aluno" class="form-label">Série</label>
+                    <select id="serie_aluno" class="form-select">
+                        <option selected>Série</option>
+                        <option value="1º">1º</option>
+                        <option value="2º">2º</option>
+                        <option value="3º">3º</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row-2">
+                <div class="col-mb-3">
+                    <label for="curso_aluno" class="form-label">Curso</label>
+                    <select id="curso_aluno" class="form-select">
+                        <option selected>Curso</option>
+                        <option value="Enfermagem">Enfermagem</option>
+                        <option value="Informática">Informática</option>
+                        <option value="Administração">Administração</option>
+                        <option value="Comércio">Comércio</option>
+                    </select>
+                </div>
+            </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </fieldset>
+        </div>
+    </div>
     <div class="form_body">
-        <div class="form">
-                <h2>Preencha os campos</h2>
-                <div class="input_box">
-                    <input type="text" id="nome_aluno" placeholder="Nome Completo">
-                </div>
-                <div class="input_box">
-                    <input type="text" id="curso_aluno" placeholder="Curso">
-                </div>
-                <div class="input_box">
-                    <input type="text"  id="serie_aluno" placeholder="Série">
-                </div>
-                <div class="input_box">
-                    <input type="text"  id="matricula_aluno" placeholder="Matrícula">
-                </div>
-                <div class="input_box">
-                    <input type="text"  id="telefone_aluno" placeholder="Telefone">
-                </div>
-                <div class="input_box">
-                    <input type="text"  id="endereco_aluno" placeholder="Endereço">
-                </div>
-                <div class="input_box">
-                    <input type="text"  id="email_aluno" placeholder="E-mail">
-                </div>
-                <div class="input_box">
-                    <input type="password"  id="senha_aluno" placeholder="Senha">
-                </div>
-                <div>
-                    <button type="submit" onclick="cadaluno()">Cadastrar</button>
-                </div>
+        <div>
+            <h2>Preencha os campos</h2>
+            <div class="input_box">
+                <input type="text" id="nome_aluno" placeholder="Nome Completo">
+            </div>
+            <div class="input_box">
+                <input type="text" id="curso_aluno" placeholder="Curso">
+            </div>
+            <div class="input_box">
+                <input type="text" id="serie_aluno" placeholder="Série">
+            </div>
+            <div class="input_box">
+                <input type="text" id="matricula_aluno" placeholder="Matrícula">
+            </div>
+            <div class="input_box">
+                <input type="text" id="telefone_aluno" placeholder="Telefone">
+            </div>
+            <div class="input_box">
+                <input type="text" id="endereco_aluno" placeholder="Endereço">
+            </div>
+            <div class="input_box">
+                <input type="text" id="email_aluno" placeholder="E-mail">
+            </div>
+            <div class="input_box">
+                <input type="password" id="senha_aluno" placeholder="Senha">
+            </div>
+            <div>
+                <button type="submit" onclick="cadaluno()">Cadastrar</button>
+            </div>
         </div>
     </div>
 
