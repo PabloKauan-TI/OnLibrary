@@ -65,29 +65,44 @@
             </div>
         </div>
     </nav>
-        <div class="form">
-            <form action="resposta_cad_bib">
-                <h2>Preencha os campos...</h2>
-                <div class="input_box">
-                    <input type="text" id="nome_bibliotecaria" placeholder="Nome Completo">
+        <form action="" method="post">
+            <div class="col-auto">
+                <div class="input-group">
+                  <div class="input-group-text">Nome</div>
+                  <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="">
                 </div>
-                <div class="input_box">
-                    <input type="text" id="endereco_bibliotecaria" placeholder="Endereço">
+            </div>
+
+            <div class="col-auto">
+                <div class="input-group">
+                  <div class="input-group-text">Endereço</div>
+                  <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="">
                 </div>
-                <div class="input_box">
-                    <input type="text" id="telefone_bibliotecaria" placeholder="Telefone">
+            </div>
+
+            <div class="col-auto">
+                <div class="input-group">
+                  <div class="input-group-text">Telefone</div>
+                  <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="">
                 </div>
-                <div class="input_box">
-                    <input type="text" id="email_bibliotecaria" placeholder="E-mail">
+            </div>
+
+            <div class="col-auto">
+                <div class="input-group">
+                  <div class="input-group-text">Email</div>
+                  <input type="email" class="form-control" id="autoSizingInputGroup" placeholder="">
                 </div>
-                <div class="input_box">
-                    <input type="password" id="senha_bibliotecaria" placeholder="Senha">
+            </div>
+
+            <div class="col-auto">
+                <div class="input-group">
+                  <div class="input-group-text">Senha</div>
+                  <input type="password" class="form-control" id="autoSizingInputGroup" placeholder="">
                 </div>
-                <div>
-                    <button type="submit">Cadastrar</button>
-                </div>
-            </form>
-        </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
     </div>
 </body>
 
