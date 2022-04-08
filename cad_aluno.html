@@ -68,70 +68,64 @@
     <div class="form">
         <div class="container">
             <fieldset>
-            <div class="row-1">
                 <legend>Cadastrar Usuário</legend>
-                <div class="mb-6">
-                    <label for="nome_aluno" class="form-label">Nome</label>
-                    <input type="text" id="nome_aluno" class="form-control" placeholder="Nome">
+                <div class="row">
+                    <div class="col-9">
+                        <label for="nome_aluno" class="form-label">Nome</label>
+                        <input type="text" id="nome_aluno" class="form-control" placeholder="">
+                    </div>
+                    <div class="col-3">
+                        <label for="matricula_aluno" class="form-label">Mátricula</label>
+                        <input type="text" id="matricula_aluno" class="form-control" placeholder="">
+                    </div>
                 </div>
-            </div>
-            <div class="row-2">
-                <div class="col-mb-6">
-                    <label for="serie_aluno" class="form-label">Série</label>
-                    <select id="serie_aluno" class="form-select">
-                        <option selected>Série</option>
-                        <option value="1º">1º</option>
-                        <option value="2º">2º</option>
-                        <option value="3º">3º</option>
-                    </select>
+                <div class="row">
+                    <div class="col">
+                        <label for="serie_aluno" class="form-label">Série</label>
+                        <select id="serie_aluno" class="form-select">
+                            <option selected>Série</option>
+                            <option value="1º">1º</option>
+                            <option value="2º">2º</option>
+                            <option value="3º">3º</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="curso_aluno" class="form-label">Curso</label>
+                        <select id="curso_aluno" class="form-select">
+                            <option selected>Curso</option>
+                            <option value="Enfermagem">Enfermagem</option>
+                            <option value="Informática">Informática</option>
+                            <option value="Administração">Administração</option>
+                            <option value="Comércio">Comércio</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="row-2">
-                <div class="col-mb-3">
-                    <label for="curso_aluno" class="form-label">Curso</label>
-                    <select id="curso_aluno" class="form-select">
-                        <option selected>Curso</option>
-                        <option value="Enfermagem">Enfermagem</option>
-                        <option value="Informática">Informática</option>
-                        <option value="Administração">Administração</option>
-                        <option value="Comércio">Comércio</option>
-                    </select>
+                <div class="row">
+                    <div class="col">
+                        <label for="endereco_aluno" class="form-label">Endereço</label>
+                        <input type="text" id="endereco_aluno" class="form-control" placeholder="">
+                    </div>
+                    <div class="col">
+                        <label for="telefone_aluno" class="form-label">Telefone</label>
+                        <input type="text" id="telefone_aluno" class="form-control" placeholder="">
+                    </div>
                 </div>
-            </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="row">
+                    <div class="col-9">
+                        <label for="email_aluno" class="form-label">E-mail</label>
+                        <input type="email" id="email_aluno" class="form-control" placeholder="">
+                    </div>
+                    <div class="col-3">
+                        <label for="senha_aluno" class="form-label">Mátricula</label>
+                        <input type="password" id="senha_aluno" class="form-control" placeholder="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10">
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    </div>
+                </div>
             </fieldset>
-        </div>
-    </div>
-    <div class="form_body">
-        <div>
-            <h2>Preencha os campos</h2>
-            <div class="input_box">
-                <input type="text" id="nome_aluno" placeholder="Nome Completo">
-            </div>
-            <div class="input_box">
-                <input type="text" id="curso_aluno" placeholder="Curso">
-            </div>
-            <div class="input_box">
-                <input type="text" id="serie_aluno" placeholder="Série">
-            </div>
-            <div class="input_box">
-                <input type="text" id="matricula_aluno" placeholder="Matrícula">
-            </div>
-            <div class="input_box">
-                <input type="text" id="telefone_aluno" placeholder="Telefone">
-            </div>
-            <div class="input_box">
-                <input type="text" id="endereco_aluno" placeholder="Endereço">
-            </div>
-            <div class="input_box">
-                <input type="text" id="email_aluno" placeholder="E-mail">
-            </div>
-            <div class="input_box">
-                <input type="password" id="senha_aluno" placeholder="Senha">
-            </div>
-            <div>
-                <button type="submit" onclick="cadaluno()">Cadastrar</button>
-            </div>
         </div>
     </div>
 

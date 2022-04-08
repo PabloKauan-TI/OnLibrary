@@ -37,5 +37,13 @@ body::before{
 .form{
     position: relative;
     z-index: 100;
-    width: 50%;
+}
+
+.container{
+    background-color: rgba(0, 0, 0, 0.493);
+    border-radius: 15px;
+}
+
+.row{
+    padding-bottom: 15px;
 }
