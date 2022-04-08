@@ -67,33 +67,40 @@
     </nav>
 
 
-        <form action="" method="post">
-        
+    <div class="form">
+        <div class="container">
+            <fieldset>
+                <legend>Cadastrar Bibliotecária</legend>
+            
                 <div class="input-group">
+                    <label for="nome_secretaria" class="form-label">Nome</label>
                   <input type="text" class="form-control" id="nome_secretaria" placeholder="">
                 </div>
             
                 <div class="input-group">
-                  <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="">
+                    <label for="endereco_secretaria" class="form-label">Endereço</label>
+                  <input type="text" class="form-control" id="endereco_biblioteca" placeholder="">
+                </div>
+            
+                <div class="input-group">
+                    <label for="telefone_secretaria" class="form-label">Telefone</label>
+                  <input type="text" class="form-control" id="telefone_biblioteca" placeholder="">
+                </div>
+            
+                <div class="input-group">
+                  <label for="email_secretaria" class="form-label">E-mail</label>
+                  <input type="email" class="form-control" id="email_secretaria" placeholder="">
                 </div>
 
                 <div class="input-group">
-                  <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="">
+                    <label for="senha_secretaria" class="form-label">Senha</label>
+                   <input type="password" class="form-control" id="senha_biblioteca" placeholder="">
                 </div>
 
-                <div class="input-group">
-                  <input type="email" class="form-control" id="autoSizingInputGroup" placeholder="">
-                </div>
-            </div>
-
-                <div class="input-group">
-                  <input type="password" class="form-control" id="autoSizingInputGroup" placeholder="">
-                </div>
-
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
-        </form>
-    
-
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </fieldset>
+        </div>   
+    </div>
 </body>
 
 </html>
