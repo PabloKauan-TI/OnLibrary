@@ -9,5 +9,20 @@ function cadaluno() {
      const email = document.getElementById("email_aluno").value
      const senha = document.getElementById("senha_aluno").value
 
-     
-}
+     const form = new FormData()
+
+     form.append('nome', nome);
+     form.append('curso', curso);
+     form.append('serie', serie);
+     form.append('matricula', matricula);
+     form.append('telefone', telefone);
+     form.append('endereco', endereco);
+     form.append('email', email);
+     form.append('senha', senha);
+
+     const url = 'http://localhost:8080/onlibrary/assets/php/cadastro_aluno.php';
+
+     fetch(url, {
+          method: 'POST',
+          body:form
+     })
