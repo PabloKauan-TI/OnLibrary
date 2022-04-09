@@ -25,4 +25,9 @@ function cadaluno() {
      fetch(url, {
           method: 'POST',
           body:form
-     })
+     }).then(response =>{
+          response.json().then(result =>{
+               console.log(result)
+          })
+     }).catch(err => console.log(err))
+}

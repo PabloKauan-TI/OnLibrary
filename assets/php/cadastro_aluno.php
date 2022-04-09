@@ -1,5 +1,9 @@
 <?php
+    
+    header('Acess-Control-Allow-Origin: *')
+    
     require_once('config.php');
+    session_start();
 
     $nome=$_POST['nome'];
     $curso=$_POST['curso'];
