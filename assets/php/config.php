@@ -1,6 +1,6 @@
 <?php
 
-    header('Acess-Control-Allow-Origin: *')
+    header('Acess-Control-Allow-Origin: *');
 
     $host="localhost";
     $user="root";

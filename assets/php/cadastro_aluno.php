@@ -1,7 +1,7 @@
 <?php
     
-    header('Acess-Control-Allow-Origin: *')
-    
+    header('Acess-Control-Allow-Origin: *');
+
     require_once('config.php');
     session_start();
 
