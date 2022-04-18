@@ -33,7 +33,7 @@ body::before{
 .login_body{
     padding: 60px;
     z-index: 90;
-    position: relative;
+    position: absolute;
     max-width: 450px;
     height: 390px;
     margin-left: 50%;
