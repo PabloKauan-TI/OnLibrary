@@ -5,9 +5,9 @@ CREATE TABLE cadbibliotecaria (
     id_bibliotecaria INT AUTO_INCREMENT PRIMARY KEY,
     nome_bibliotecaria VARCHAR(50),
     endereco_bibliotecaria VARCHAR(50),
-    telefone_bibliotecaria INT(6),
+    telefone_bibliotecaria VARCHAR(50),
     email_bibliotecaria VARCHAR(50),
-    senha_bibliotecaria INT(6)
+    senha_bibliotecaria VARCHAR(50)
 );
 
 CREATE TABLE cadaluno (
@@ -15,10 +15,10 @@ CREATE TABLE cadaluno (
     nome_aluno VARCHAR(50),
     email_aluno VARCHAR(50),
     senha_aluno VARCHAR(50),
-    telefone_aluno INT(12),
+    telefone_aluno VARCHAR(50),
     endereco_aluno VARCHAR(50),
     curso_aluno VARCHAR(50),
-    serie_aluno INT(6)
+    serie_aluno VARCHAR(50)
 );
 
 CREATE TABLE cadlivro (
@@ -26,22 +26,16 @@ CREATE TABLE cadlivro (
     titulo_livro VARCHAR(50),
     autor_livro VARCHAR(50),
     qtd_livro INT(50),
-    dtemp_livro DATE,
-    dtdevo_livro DATE,
-    id_bibliotecaria INT(50)
+    imagem_livro longblob NOT NULL
+
 );
 
 CREATE TABLE emprestimolivro (
     cod_livro INT AUTO_INCREMENT PRIMARY KEY,
     titulo_livro VARCHAR(50),
     aluno VARCHAR(50),
-    serie INT(6),
+    serie VARCHAR(50),
     curso VARCHAR(50),
     data_emp DATE,
     situacao VARCHAR(50)
 );
- 
-ALTER TABLE cadlivro ADD CONSTRAINT FK_cadlivro_2
-    FOREIGN KEY (id_bibliotecaria)
-    REFERENCES cadbibliotecaria (id_bibliotecaria);
-
