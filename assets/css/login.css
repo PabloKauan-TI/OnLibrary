@@ -30,73 +30,44 @@ body::before{
     position: relative;
 }
 
-.login_body{
-    padding: 60px;
-    z-index: 90;
-    position: absolute;
-    max-width: 450px;
-    height: 390px;
-    margin-left: 50%;
-    margin-top: 10%;
-    background-color: rgba(51, 51, 51, 0.713);
-    border-radius: 10px;
-    box-sizing: border-box;
-    transform: translateX(-50%) translateY(-10%);
+legend{
+    text-decoration: bold;
 }
 
-.login_body h2{
-    font-size: 32px;
-    color:  #fff;
-    margin-top: 0;
+.form{
+    z-index: 100;
+    padding-bottom: 25px;
 }
 
-.login_body input{
-    height: 50px;
-    width: 100%;
-    color: white;
-    background-color: #333;
-    border: none;
-    border-radius: 5px;
+.container{
+    background-color: rgba(0, 0, 0, 0.493);
+    position: relative;
+    border-radius: 15px;
+    padding-top: 15px;
     padding-left: 15px;
-    box-sizing: border-box;
-    outline: none;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    margin-top: 35px;
+    margin-bottom: 29px;
+    color: white;
+    max-width: 450px;
 }
 
-.login_body input:hover{
-    background-color: rgb(70, 63, 63);
+.row{
+    padding-bottom: 15px;
 }
 
-.input_box{
-    margin-bottom: 15px;
+.form button{
+    background-color: orangered;
+    padding: 10px 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 10px;
+    color: white;
+    border-radius: 20px;
+    border: initial;
 }
 
-.login_body button{
-    height: 50px;
-    width: 80%;
-    margin-left: 10%;
-    color: #fff;
-    background-color: rgb(223, 151, 17);
-    border-radius: 150px;
-    font-weight: bold;
-    font-size: 16px;
-    border: none;
-    margin-bottom: 10px;
-}
-
-.login_body button:hover{
-    background-color: rgb(255, 183, 3);
-    cursor: pointer;
-}
-
-.suport{
-    display: flex;
-    color: #b3b3b3;
-    justify-content: space-between;
-    font-size: 12px;
-    margin-bottom: 5px;
-}
-
-.suport input{
-    width: 15px;
-    height: 15px;
+.form button:hover{
+    background-color: rgb(255, 111, 0);
 }
