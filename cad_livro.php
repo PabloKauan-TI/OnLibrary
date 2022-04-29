@@ -68,15 +68,15 @@
                 <?php
 
                 require_once 'assets/php/config.php';
+
+
                 if ($_POST) {
                     $cod = $_POST["cod_livro"];
                     $titulo = $_POST["titulo_livro"];
-                    $titulo = $_POST["titulo_livro"];
                     $autor = $_POST["autor_livro"];
                     $qtd = $_POST["qtd_livro"];
-                    $imagem = $_POST["imagem_livro"];
 
-                    $sql = "INSERT INTO cadlivro (cod_livro, titulo_livro, titulo_livro, autor_livro, qtd_livro, imagem_livro) VALUES('$cod', '$nome', '$titulo', '$autor', '$qtd', '$imagem')";
+                    $sql = "INSERT INTO cadlivro (cod_livro, titulo_livro, autor_livro, qtd_livro) VALUES('$cod', '$titulo', '$autor', '$qtd')";
 
                     if ($con->query($sql) === TRUE) {
                         echo "Novo cadastro realizado com sucesso! <br>";
@@ -84,10 +84,12 @@
                         echo "Erro" . $sql . ' ' . $con->connect_error;
                     }
 
+                    
+
                     $con->close();
                 }
                 ?>
-                <form action="cad_livro.php" method="post">
+                <form action="cad_livro.php" method="post" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-9">
                             <label for="nome_livro" class="form-label">Nome</label>
