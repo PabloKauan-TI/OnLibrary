@@ -25,8 +25,21 @@
                             Livros
                         </a>
                         <ul class="dropdown-menu  dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Catalago</a></li>
-                            <li><a class="dropdown-item" href="#">Emprestados</a></li>
+                            <li><a class="dropdown-item" href="catalogo.php">Catalago</a></li>
+                            <li><a class="dropdown-item" href="cad_livro.php">Cadastrar</a></li>
+                            <li><a class="dropdown-item" href="#">Gerenciar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Emprestimos
+                        </a>
+                        <ul class="dropdown-menu  dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="cad_emprestimolivro.php">Realizar</a></li>
                             <li><a class="dropdown-item" href="#">Gerenciar</a></li>
                         </ul>
                     </li>
@@ -39,7 +52,7 @@
                             Alunos
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Com Livros</a></li>
+                            <li><a class="dropdown-item" href="cad_aluno.php">Cadastrar</a></li>
                             <li><a class="dropdown-item" href="#">Gerenciar</a></li>
                         </ul>
                     </li>
@@ -52,7 +65,7 @@
                             Admins
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Todos</a></li>
+                            <li><a class="dropdown-item" href="cad_bibliotecaria.php">Cadastrar</a></li>
                             <li><a class="dropdown-item" href="#">Gerenciar</a></li>
                         </ul>
                     </li>
@@ -60,7 +73,7 @@
             </div>
         </div>
     </nav>
-    
+
     <section class="catalog" id="catalog">
         <div class="content">
             <div class="card-wrapper">
@@ -69,12 +82,9 @@
                     <div class="card-content">
                         <h3>Audi Supra TT</h3>
                         <p>
-                            Autor: Monteiro Lobato
-                        </p>
-                        <p>
+                            Autor: Monteiro Lobato <br>
                             Quantidade: 3
                         </p>
-                        <button type="button">I want this!</button>
                     </div>
                 </div>
                 <div class="card-item">
@@ -82,12 +92,9 @@
                     <div class="card-content">
                         <h3>Audi Supra TT</h3>
                         <p>
-                            Autor: Monteiro Lobato
-                        </p>
-                        <p>
+                            Autor: Monteiro Lobato <br>
                             Quantidade: 3
                         </p>
-                        <button type="button">I want this!</button>
                     </div>
                 </div>
                 <div class="card-item">
@@ -95,12 +102,9 @@
                     <div class="card-content">
                         <h3>Audi Supra TT</h3>
                         <p>
-                            Autor: Monteiro Lobato
-                        </p>
-                        <p>
+                            Autor: Monteiro Lobato <br>
                             Quantidade: 3
                         </p>
-                        <button type="button">I want this!</button>
                     </div>
                 </div>
                 <div class="card-item">
@@ -108,12 +112,9 @@
                     <div class="card-content">
                         <h3>Audi Supra TT</h3>
                         <p>
-                            Autor: Monteiro Lobato
-                        </p>
-                        <p>
+                            Autor: Monteiro Lobato <br>
                             Quantidade: 3
                         </p>
-                        <button type="button">I want this!</button>
                     </div>
                 </div>
             </div>
