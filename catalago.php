@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OnLibrary</title>
-    <link rel="stylesheet" href="assets/css/cadastros.css">
+    <link rel="stylesheet" href="assets/css/catalogo.css">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <script src="assets/js/bootstrap.min.js"></script>
 </head>
@@ -60,15 +60,46 @@
             </div>
         </div>
     </nav>
-
-    <div class="form">
-        <div class="container">
-            <fieldset>
-                <legend>Catálogo</legend>
-                
-            </fieldset>
+    <section class="catalog" id="catalog">
+        <div class="content">
+            <div class="card-wrapper">
+                <div class="card-item">
+                    <img src="images/car-card.png" alt="Car" />
+                    <div class="card-content">
+                        <h3>Audi Supra TT</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Repellendus.
+                        </p>
+                        <button type="button">I want this!</button>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img src="images/car-card.png" alt="Car" />
+                    <div class="card-content">
+                        <h3>Audi Supra TT</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Repellendus.
+                        </p>
+                        <button type="button">I want this!</button>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img src="images/car-card.png" alt="Car" />
+                    <div class="card-content">
+                        <h3>Audi Supra TT</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Repellendus.
+                        </p>
+                        <button type="button">I want this!</button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
 </body>
 
 </html>

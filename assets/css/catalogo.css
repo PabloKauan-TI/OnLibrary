@@ -1,0 +1,99 @@
+body {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body::before {
+    content: '';
+    background-color: rgba(1, 1, 0, 0.501);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#logo {
+    width: 120px;
+    height: 40px;
+}
+
+.catalog {
+    width: 100%;
+    padding: 100px;
+}
+
+.card-wrapper {
+    z-index: 100;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-gap: 30px;
+    padding-top: 50px;
+}
+
+.card-item {
+    z-index: 100;
+    height: 400px;
+    background: rgba(233, 134, 5, 0.692);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-content {
+    z-index: 100;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-item img {
+    z-index: 100;
+    width: 85%;
+}
+
+.card-item h4 {
+    z-index: 100;
+    width: 90%;
+}
+
+.card-item p {
+    z-index: 100;
+    width: 90%;
+    font-style: italic;
+    color: #f3f1f170;
+}
+
+.card-item button {
+    z-index: 100;
+    width: 90%;
+    padding: 15px 0px;
+    border: none;
+    background: var(--blue);
+    border-radius: 4px;
+    color: rgb(19, 33, 233);
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-bottom: 10px;
+    background-color: chocolate;
+}
+
+.card-item button:hover {
+    z-index: 100;
+    background: #e71414;
+    color: var(--blue);
+}
