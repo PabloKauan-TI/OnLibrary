@@ -70,13 +70,20 @@
                 require_once 'assets/php/config.php';
 
 
-                if ($_POST) {
-                    $cod = $_POST["cod_livro"];
-                    $titulo = $_POST["titulo_livro"];
-                    $autor = $_POST["autor_livro"];
-                    $qtd = $_POST["qtd_livro"];
+                if (isset($_POST['submit'])) {                    
+                    $titulo_livro = $_POST['titulo_livro'];
+                    $autor_livro = $_POST['autor_livro'];
+                    $qtd_livro = $_POST['qtd_livro'];
 
-                    $sql = "INSERT INTO cadlivro (cod_livro, titulo_livro, autor_livro, qtd_livro) VALUES('$cod', '$titulo', '$autor', '$qtd')";
+                    $rand = rand(0000,9999);
+                    $imagem_livro = 'imagens/' .$rand. $_FILES['imagem_livro']['name'];
+
+                    $upload = "imagens/" .$rand. $_FILES['imagem_livro']['name'];
+
+                    move_uploaded_file($_FILES['imagem_livro']['tmp_name'],$upload);
+
+
+                    $sql = "INSERT INTO cadlivro  VALUES(NULL,'$titulo_livro', '$autor_livro', '$qtd_livro', '$imagem_livro')";
 
                     if ($con->query($sql) === TRUE) {
                         echo "Novo cadastro realizado com sucesso! <br>";
@@ -92,13 +99,13 @@
                 <form action="cad_livro.php" method="post" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-9">
-                            <label for="nome_livro" class="form-label">Nome</label>
+                            <label for="titulo_livro" class="form-label">Nome</label>
                             <input type="text" name="titulo_livro" class="form-control" placeholder="">
                         </div>
-                        <div class="col-3">
+                        <!-- <div class="col-3">
                             <label for="codigo_livro" class="form-label">Código</label>
                             <input type="text" name="cod_livro" class="form-control" placeholder="">
-                        </div>
+                        </div> -->
                     </div>
                     <div class="row">
                         <div class="col-9">
@@ -106,17 +113,17 @@
                             <input type="text" name="autor_livro" class="form-control" placeholder="">
                         </div>
                         <div class="col-3">
-                            <label for="qtde_livro" class="form-label">Quantidade</label>
+                            <label for="qtd_livro" class="form-label">Quantidade</label>
                             <input type="text" name="qtd_livro" class="form-control" placeholder="">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <label for="img" class="form-label">Capa</label>
+                            <label for="imagem_livro" class="form-label">Capa</label>
                             <input type="file" name="imagem_livro" class="form-control" placeholder="">
                         </div>
                     </div>
-                    <button type="submit">Cadastrar</button>
+                    <button type="submit" name="submit">Cadastrar</button>
                 </form>
             </fieldset>
         </div>
