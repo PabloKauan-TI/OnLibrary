@@ -25,8 +25,8 @@ CREATE TABLE cadlivro (
     cod_livro INT AUTO_INCREMENT  PRIMARY KEY,
     titulo_livro VARCHAR(50),
     autor_livro VARCHAR(50),
-    qtd_livro INT(50),
-    imagem_livro longblob NOT NULL
+    qtd_livro VARCHAR(50),
+    imagem_livro VARCHAR(250)
 
 );
 
