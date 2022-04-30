@@ -60,38 +60,58 @@
             </div>
         </div>
     </nav>
+    
     <section class="catalog" id="catalog">
         <div class="content">
             <div class="card-wrapper">
                 <div class="card-item">
-                    <img src="images/car-card.png" alt="Car" />
+                    <img src="assets/img/book.jpg" alt="Book" />
                     <div class="card-content">
                         <h3>Audi Supra TT</h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Repellendus.
+                            Autor: Monteiro Lobato
+                        </p>
+                        <p>
+                            Quantidade: 3
                         </p>
                         <button type="button">I want this!</button>
                     </div>
                 </div>
                 <div class="card-item">
-                    <img src="images/car-card.png" alt="Car" />
+                    <img src="assets/img/book.jpg" alt="Book" />
                     <div class="card-content">
                         <h3>Audi Supra TT</h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Repellendus.
+                            Autor: Monteiro Lobato
+                        </p>
+                        <p>
+                            Quantidade: 3
                         </p>
                         <button type="button">I want this!</button>
                     </div>
                 </div>
                 <div class="card-item">
-                    <img src="images/car-card.png" alt="Car" />
+                    <img src="assets/img/book.jpg" alt="Book" />
                     <div class="card-content">
                         <h3>Audi Supra TT</h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Repellendus.
+                            Autor: Monteiro Lobato
+                        </p>
+                        <p>
+                            Quantidade: 3
+                        </p>
+                        <button type="button">I want this!</button>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img src="assets/img/book.jpg" alt="Book" />
+                    <div class="card-content">
+                        <h3>Audi Supra TT</h3>
+                        <p>
+                            Autor: Monteiro Lobato
+                        </p>
+                        <p>
+                            Quantidade: 3
                         </p>
                         <button type="button">I want this!</button>
                     </div>
