@@ -68,17 +68,15 @@
                 <?php
 
                 require_once 'assets/php/config.php';
-                if ($_POST) {
-                    $nome = $_POST["nome_livro"];
-                    $curso = $_POST["curso_aluno"];
-                    $serie = $_POST["serie_aluno"];
-                    $matricula = $_POST["codigo_livro"];
-                    $telefone = $_POST["telefone_aluno"];
-                    $endereco = $_POST["endereco_aluno"];
-                    $email = $_POST["email_aluno"];
-                    $senha = $_POST["senha_aluno"];
 
-                    $sql = "INSERT INTO cadaluno (codigo_livro,nome_livro, email_aluno, senha_aluno, telefone_aluno, endereco_aluno, curso_aluno, serie_aluno) VALUES('$matricula', '$nome', '$email', '$senha', '$telefone', '$endereco', '$curso', '$serie')";
+
+                if ($_POST) {
+                    $cod = $_POST["cod_livro"];
+                    $titulo = $_POST["titulo_livro"];
+                    $autor = $_POST["autor_livro"];
+                    $qtd = $_POST["qtd_livro"];
+
+                    $sql = "INSERT INTO cadlivro (cod_livro, titulo_livro, autor_livro, qtd_livro) VALUES('$cod', '$titulo', '$autor', '$qtd')";
 
                     if ($con->query($sql) === TRUE) {
                         echo "Novo cadastro realizado com sucesso! <br>";
@@ -86,18 +84,20 @@
                         echo "Erro" . $sql . ' ' . $con->connect_error;
                     }
 
+                    
+
                     $con->close();
                 }
                 ?>
-                <form action="cad_livro.php" method="post">
+                <form action="cad_livro.php" method="post" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-9">
                             <label for="nome_livro" class="form-label">Nome</label>
-                            <input type="text" name="nome_livro" class="form-control" placeholder="">
+                            <input type="text" name="titulo_livro" class="form-control" placeholder="">
                         </div>
                         <div class="col-3">
                             <label for="codigo_livro" class="form-label">Código</label>
-                            <input type="text" name="codigo_livro" class="form-control" placeholder="">
+                            <input type="text" name="cod_livro" class="form-control" placeholder="">
                         </div>
                     </div>
                     <div class="row">
@@ -107,13 +107,13 @@
                         </div>
                         <div class="col-3">
                             <label for="qtde_livro" class="form-label">Quantidade</label>
-                            <input type="text" name="qtde_livro" class="form-control" placeholder="">
+                            <input type="text" name="qtd_livro" class="form-control" placeholder="">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
                             <label for="img" class="form-label">Capa</label>
-                            <input type="file" name="img" class="form-control" placeholder="">
+                            <input type="file" name="imagem_livro" class="form-control" placeholder="">
                         </div>
                     </div>
                     <button type="submit">Cadastrar</button>
