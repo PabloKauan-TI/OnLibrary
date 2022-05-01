@@ -83,9 +83,9 @@
     <section class="catalog" id="catalog">
         <div class="content">
             <div class="card-wrapper">
-                <?php while($dado = $result->fetch_array()){ ?>
+                <?php while($dado = mysqli_fetch_assoc($result)){ ?>
                 <div class="card-item">
-                    <?php echo '<img src="'.$dado['imagem_livro'].'">'; ?>
+                    <img src="../<?php echo $dado['imagem_livro']; ?>">
                     <div class="card-content">
                         <h3><?php echo $dado["titulo_livro"]; ?></h3>
                         <p>
