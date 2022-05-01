@@ -49,8 +49,7 @@ legend{
     margin: 0 auto;
     color: white;
     max-width: 450px;
-    margin-top: 50%;
-    transform: translateY(-50%);
+    margin-top: 10%;
 }
 
 .row{
@@ -86,5 +85,5 @@ legend{
     width: 300px;
     margin-top: 80%;
     transform: translateY(-50%)
-}
+    }
 }
