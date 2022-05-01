@@ -1,3 +1,9 @@
+<?php 
+    include("assets/php/config.php"); 
+    $sql = "SELECT * FROM cadlivro";
+    $result = $con->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,46 +83,18 @@
     <section class="catalog" id="catalog">
         <div class="content">
             <div class="card-wrapper">
+                <?php while($dado = $result->fetch_array()){ ?>
                 <div class="card-item">
-                    <img src="assets/img/book.jpg" alt="Book" />
+                    <?php echo '<img src="'.$dado['imagem_livro'].'">'; ?>
                     <div class="card-content">
-                        <h3>Audi Supra TT</h3>
+                        <h3><?php echo $dado["titulo_livro"]; ?></h3>
                         <p>
-                            Autor: Monteiro Lobato <br>
-                            Quantidade: 3
+                            Autor: <?php echo $dado["autor_livro"]; ?><br>
+                            Quantidade: <?php echo $dado["qtd_livro"]; ?>
                         </p>
                     </div>
                 </div>
-                <div class="card-item">
-                    <img src="assets/img/book.jpg" alt="Book" />
-                    <div class="card-content">
-                        <h3>Audi Supra TT</h3>
-                        <p>
-                            Autor: Monteiro Lobato <br>
-                            Quantidade: 3
-                        </p>
-                    </div>
-                </div>
-                <div class="card-item">
-                    <img src="assets/img/book.jpg" alt="Book" />
-                    <div class="card-content">
-                        <h3>Audi Supra TT</h3>
-                        <p>
-                            Autor: Monteiro Lobato <br>
-                            Quantidade: 3
-                        </p>
-                    </div>
-                </div>
-                <div class="card-item">
-                    <img src="assets/img/book.jpg" alt="Book" />
-                    <div class="card-content">
-                        <h3>Audi Supra TT</h3>
-                        <p>
-                            Autor: Monteiro Lobato <br>
-                            Quantidade: 3
-                        </p>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
     </section>
