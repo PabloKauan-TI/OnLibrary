@@ -98,7 +98,7 @@
                 ?>
                 <form action="cad_livro.php" method="post" enctype="multipart/form-data">
                     <div class="row">
-                        <div class="col-9">
+                        <div class="col">
                             <label for="titulo_livro" class="form-label">Nome</label>
                             <input type="text" name="titulo_livro" class="form-control" placeholder="">
                         </div>
