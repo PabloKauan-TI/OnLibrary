@@ -75,15 +75,16 @@
                     $autor_livro = $_POST['autor_livro'];
                     $qtd_livro = $_POST['qtd_livro'];
 
-                    $rand = rand(0000,9999);
-                    $imagem_livro = 'imagens/' .$rand. $_FILES['imagem_livro']['name'];
+                    $arquivo = $_FILES['imagem_livro']['name'];
+                    $extensao = strtolower(pathinfo($arquivo, PATHINFO_EXTENSION));
 
-                    $upload = "imagens/" .$rand. $_FILES['imagem_livro']['name'];
+                    $novo_nome = md5(time()).".".$extensao;
 
-                    move_uploaded_file($_FILES['imagem_livro']['tmp_name'],$upload);
+                    $diretorio = "./imagens/"; 
 
+                    move_uploaded_file($_FILES['imagem_livro']['tmp_name'], $diretorio.$novo_nome);
 
-                    $sql = "INSERT INTO cadlivro  VALUES(NULL,'$titulo_livro', '$autor_livro', '$qtd_livro', '$imagem_livro')";
+                    $sql = "INSERT INTO cadlivro VALUES(NULL,'$titulo_livro', '$autor_livro', '$qtd_livro', '$novo_nome')";
 
                     if ($con->query($sql) === TRUE) {
                         echo "Novo cadastro realizado com sucesso! <br>";

@@ -85,7 +85,7 @@
             <div class="card-wrapper">
                 <?php while($dado = mysqli_fetch_assoc($result)){ ?>
                 <div class="card-item">
-                    <img src="../<?php echo $dado['imagens/imagem_livro']; ?>">
+                    <img src="./imagens/<?php echo $dado['imagem_livro']; ?>">
                     <div class="card-content">
                         <h3><?php echo $dado["titulo_livro"]; ?></h3>
                         <p>
