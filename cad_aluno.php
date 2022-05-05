@@ -77,8 +77,17 @@
                     $endereco = $_POST["endereco_aluno"];
                     $email = $_POST["email_aluno"];
                     $senha = $_POST["senha_aluno"];
+                    $arquivo = $ $_FILES["imagem_aluno"]["name"];
 
-                    $sql = "INSERT INTO cadaluno (matricula_aluno,nome_aluno, email_aluno, senha_aluno, telefone_aluno, endereco_aluno, curso_aluno, serie_aluno) VALUES('$matricula', '$nome', '$email', '$senha', '$telefone', '$endereco', '$curso', '$serie')";
+                    $extensao = strtolower(pathinfo($arquivo, PATHINFO_EXTENSION));
+
+                    $novo_nome = md5(time()).".".$extensao;
+
+                    $diretorio = "./imagens/"; 
+
+                    move_uploaded_file($_FILES['imagem_livro']['tmp_name'], $diretorio.$novo_nome);
+
+                    $sql = "INSERT INTO cadaluno (matricula_aluno,nome_aluno, email_aluno, senha_aluno, telefone_aluno, endereco_aluno, curso_aluno, serie_aluno) VALUES('$matricula', '$nome', '$email', '$senha', '$telefone', '$endereco', '$curso', '$serie', '$novo_nome')";
 
                     if ($con->query($sql) === TRUE) {
                         echo "Novo cadastro realizado com sucesso! <br>"; 
@@ -139,6 +148,12 @@
                         <div class="col">
                             <label for="senha_aluno" class="form-label">Senha</label>
                             <input type="password" name="senha_aluno" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="imagem_aluno" class="form-label">Capa</label>
+                            <input type="file" name="imagem_aluno" class="form-control" placeholder="">
                         </div>
                     </div>
                     <button type="submit">Cadastrar</button>
