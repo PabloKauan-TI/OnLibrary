@@ -87,7 +87,7 @@
                 <div class="card-item">
                     <img src="./imagens/<?php echo $dado['imagem_livro']; ?>">
                     <div class="card-content">
-                        <h3><?php echo $dado["titulo_livro"]; ?></h3>
+                        <h3><?php echo $dado["titulo_livro"];?></h3>
                         <p>
                             Autor: <?php echo $dado["autor_livro"]; ?><br>
                             Quantidade: <?php echo $dado["qtd_livro"]; ?>

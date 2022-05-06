@@ -62,8 +62,8 @@ body::before {
 
 .card-item img {
     z-index: 100;
-    width: 85%;
-    height: 100%;
+    width: 90%;
+    height: 350px;
     border-radius: 15px;
     margin-top: 15px;
 }
@@ -105,4 +105,12 @@ body::before {
     align-items: center;
     justify-content: space-around;
     } 
+
+    .card-item img {
+        z-index: 100;
+        width: 90%;
+        height: 200px;
+        border-radius: 15px;
+        margin-top: 15px;
+    }
 }
