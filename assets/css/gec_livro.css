@@ -1,0 +1,146 @@
+body {
+    padding: 0;
+    margin: 0;
+    position: initial;
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body::before {
+    content: '';
+    background-color: rgba(1, 1, 0, 0.501);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#logo {
+    width: 120px;
+    height: 40px;
+}
+
+.catalog {
+    width: 100%;
+    padding: 100px;
+}
+
+.card-wrapper {
+    z-index: 100;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 30px;
+    padding-top: 50px;
+}
+
+.card-item {
+    z-index: 100;
+    background: rgba(15, 15, 13, 0.692);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-content {
+    z-index: 100;
+    height: 80%;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.card-item img {
+    z-index: 100;
+    width: 90%;
+    height: 350px;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+.card-item h3 {
+    z-index: 100;
+    width: 90%;
+    color: rgba(241, 148, 25, 0.884);
+}
+
+.card-item p {
+    z-index: 100;
+    width: 90%;
+    font-style: italic;
+    color: antiquewhite; 
+}
+
+.card-btn {
+    display: flex;
+    margin-bottom: 15px;
+    width: 40%;
+    justify-content: space-between;
+}
+
+.card-btn img{
+    width: 24px;
+    height: 24px;
+    padding: 0 auto;
+    margin: 0 auto;
+   
+}
+
+@media (max-width: 700px){
+    .catalog{
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    .card-wrapper {
+    z-index: 100;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-gap: 10px;
+    padding-top: 50px;
+    }
+    
+    .card-item {
+    z-index: 100;
+    background: rgba(15, 15, 13, 0.692);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    } 
+
+    .card-item img {
+        z-index: 100;
+        width: 90%;
+        height: 200px;
+        border-radius: 15px;
+        margin-top: 15px;
+    }
+    
+    .card-btn {
+    display: flex;
+    margin-bottom: 15px;
+    width: 70%;
+    justify-content: space-between;
+    }
+
+    .card-btn img{
+        width: 24px;
+        height: 24px;
+        padding: 0 auto;
+        margin: 0 auto;
+
+    }
+}
