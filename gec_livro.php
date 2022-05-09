@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OnLibrary</title>
-    <link rel="stylesheet" href="assets/css/catalogo.css">
+    <link rel="stylesheet" href="assets/css/gec_livro.css">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <script src="assets/js/bootstrap.min.js"></script>
 </head>
@@ -92,6 +92,10 @@
                             Autor: <?php echo $dado["autor_livro"]; ?><br>
                             Quantidade: <?php echo $dado["qtd_livro"]; ?>
                         </p>
+                    </div>
+                    <div class="card-btn">
+                        <button class="btn btn-secondary"><img src="assets/css/escrever.png"></button>
+                        <button class="btn btn-secondary"><img src="assets/css/excluir.png"></button>
                     </div>
                 </div>
                 <?php } ?>

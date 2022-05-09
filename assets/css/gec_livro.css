@@ -81,6 +81,21 @@ body::before {
     color: antiquewhite; 
 }
 
+.card-btn {
+    display: flex;
+    margin-bottom: 15px;
+    width: 40%;
+    justify-content: space-between;
+}
+
+.card-btn img{
+    width: 24px;
+    height: 24px;
+    padding: 0 auto;
+    margin: 0 auto;
+   
+}
+
 @media (max-width: 700px){
     .catalog{
         margin: 0 auto;
@@ -112,5 +127,20 @@ body::before {
         height: 200px;
         border-radius: 15px;
         margin-top: 15px;
+    }
+    
+    .card-btn {
+    display: flex;
+    margin-bottom: 15px;
+    width: 70%;
+    justify-content: space-between;
+    }
+
+    .card-btn img{
+        width: 24px;
+        height: 24px;
+        padding: 0 auto;
+        margin: 0 auto;
+
     }
 }
