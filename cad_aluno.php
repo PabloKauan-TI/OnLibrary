@@ -25,7 +25,7 @@
                             Livros
                         </a>
                         <ul class="dropdown-menu  dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Catalago</a></li>
+                            <li><a class="dropdown-item" href="#">Catálogo</a></li>
                             <li><a class="dropdown-item" href="#">Emprestados</a></li>
                             <li><a class="dropdown-item" href="#">Gerenciar</a></li>
                         </ul>
@@ -64,7 +64,7 @@
     <div class="form">
         <div class="container">
             <fieldset>
-                <legend>Cadastrar Usuário</legend>
+                <legend>Cadastrar Aluno</legend>
                 <?php
 
                 require_once 'assets/php/config.php';
@@ -77,17 +77,8 @@
                     $endereco = $_POST["endereco_aluno"];
                     $email = $_POST["email_aluno"];
                     $senha = $_POST["senha_aluno"];
-                    $arquivo = $ $_FILES["imagem_aluno"]["name"];
 
-                    $extensao = strtolower(pathinfo($arquivo, PATHINFO_EXTENSION));
-
-                    $novo_nome = md5(time()).".".$extensao;
-
-                    $diretorio = "./imagens/"; 
-
-                    move_uploaded_file($_FILES['imagem_livro']['tmp_name'], $diretorio.$novo_nome);
-
-                    $sql = "INSERT INTO cadaluno (matricula_aluno,nome_aluno, email_aluno, senha_aluno, telefone_aluno, endereco_aluno, curso_aluno, serie_aluno) VALUES('$matricula', '$nome', '$email', '$senha', '$telefone', '$endereco', '$curso', '$serie', '$novo_nome')";
+                    $sql = "INSERT INTO cadaluno (matricula_aluno,nome_aluno, email_aluno, senha_aluno, telefone_aluno, endereco_aluno, curso_aluno, serie_aluno) VALUES('$matricula', '$nome', '$email', '$senha', '$telefone', '$endereco', '$curso', '$serie')";
 
                     if ($con->query($sql) === TRUE) {
                         echo "Novo cadastro realizado com sucesso! <br>"; 
@@ -150,12 +141,7 @@
                             <input type="password" name="senha_aluno" class="form-control" placeholder="">
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col">
-                            <label for="imagem_aluno" class="form-label">Capa</label>
-                            <input type="file" name="imagem_aluno" class="form-control" placeholder="">
-                        </div>
-                    </div>
+                    
                     <button type="submit">Cadastrar</button>
                 </form>
             </fieldset>
