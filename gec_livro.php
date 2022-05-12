@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets/css/gec_livro.css">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/fuctions.js"></script>
 </head>
 
 <body>
@@ -87,15 +88,15 @@
                 <div class="card-item">
                     <img src="./imagens/<?php echo $dado['imagem_livro']; ?>">
                     <div class="card-content">
-                        <h3><?php echo $dado["titulo_livro"];?></h3>
+                        <h3 id="titulo"><?php echo $dado["titulo_livro"];?></h3>
                         <p>
                             Autor: <?php echo $dado["autor_livro"]; ?><br>
                             Quantidade: <?php echo $dado["qtd_livro"]; ?>
                         </p>
                     </div>
                     <div class="card-btn">
-                        <button class="btn btn-secondary"><img src="assets/css/escrever.png"></button>
-                        <button class="btn btn-secondary"><img src="assets/css/excluir.png"></button>
+                        <button class="btn btn-secondary"><a href="assets/php/atualizar_livro.php?cod_livro=<?php echo $dado['cod_livro']; ?>"><img src="assets/css/escrever.png"></a></button>
+                        <button class="btn btn-secondary"><a href="assets/php/delete_livro.php?cod_livro=<?php echo $dado['cod_livro']; ?>"><img src="assets/css/excluir.png"></a></button>
                     </div>
                 </div>
                 <?php } ?>
