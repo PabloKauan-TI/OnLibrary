@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets/css/catalogo.css">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <script src="assets/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -79,6 +80,13 @@
             </div>
         </div>
     </nav>
+
+    <div class="col-9">
+        <div class="input-group mb-3">
+            <input type="search" class="form-control" placeholder="Buscar" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-outline-primary" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
+        </div>
+    </div>
 
     <section class="catalog" id="catalog">
         <div class="content">
