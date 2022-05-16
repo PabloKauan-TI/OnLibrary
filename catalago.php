@@ -81,12 +81,15 @@
         </div>
     </nav>
 
+    <form action="assets/php/pesquisar.php" method="post">
     <div class="col-9">
         <div class="input-group mb-3">
-            <input type="search" class="form-control" placeholder="Buscar" aria-label="Recipient's username" aria-describedby="button-addon2">
-            <button class="btn btn-outline-primary" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
+            <input type="search" class="form-control" placeholder="Buscar" name="pesquisar">
+            <button class="btn btn-primary" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
         </div>
     </div>
+    </form>
+  
 
     <section class="catalog" id="catalog">
         <div class="content">
