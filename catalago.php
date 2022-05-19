@@ -2,6 +2,13 @@
     include("assets/php/config.php"); 
     $sql = "SELECT * FROM cadlivro";
     $result = $con->query($sql);
+
+    if(!empty($_GET['search'])){
+        $data = $_GET['search'];
+        $sql = "SELECT * FROM cadlivro WHERE  titulo_livro '%data' or autor_livro '%data' or qtd_livro '%data' or imagem_livro '%data'";
+    }else{
+        $sql = "SELECT * FROM cadlivro";
+    }
 ?>
 
 <!DOCTYPE html>
@@ -81,11 +88,11 @@
         </div>
     </nav>
 
-    <form action="assets/php/pesquisar.php" method="post">
+    <form action="catalago.php" method="post">
     <div class="col-9">
         <div class="input-group mb-3">
             <input type="search" class="form-control" placeholder="Buscar" name="pesquisar">
-            <button class="btn btn-primary" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
+            <button class="btn btn-primary" type="submit" id="pesquisar"><i class="bi bi-search"></i></button>
         </div>
     </div>
     </form>
@@ -109,6 +116,15 @@
             </div>
         </div>
     </section>
+    
+    <script>
+        var search = document.getElementById('pesquisar');
+
+        search.addEventListener("keydown", function(event){
+            if 
+        }
+    </script>
+
 
 </body>
 
