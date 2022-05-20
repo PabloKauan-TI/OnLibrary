@@ -1,9 +1,9 @@
-<?php 
-    include("assets/php/config.php"); 
-    $sql = "SELECT * FROM cadlivro";
-    $result = $con->query($sql);
+<?php
+include("assets/php/config.php");
+$sql = "SELECT * FROM cadlivro";
+$result = $con->query($sql);
 
-    
+
 ?>
 
 <!DOCTYPE html>
@@ -82,31 +82,32 @@
             </div>
         </div>
     </nav>
-
-    <form action="catalago.php" method="post">
-    <div class="col-9">
-        <div class="input-group mb-3">
-            <input type="search" class="form-control" placeholder="Buscar" name="pesquisar">
-            <button class="btn btn-primary" type="submit" id="pesquisar"><i class="bi bi-search"></i></button>
-        </div>
+    <div id="pesq">
+        <form action="catalago.php" method="post">
+            <div class="col">
+                <div class="input-group mb-3">
+                    <input type="search" class="form-control" placeholder="Buscar" name="pesquisar">
+                    <button class="btn btn-secondary" type="submit" id="pesquisar"><i class="bi bi-search"></i></button>
+                </div>
+            </div>
+        </form>
     </div>
-    </form>
-  
+
 
     <section class="catalog" id="catalog">
         <div class="content">
             <div class="card-wrapper">
-                <?php while($dado = mysqli_fetch_assoc($result)){ ?>
-                <div class="card-item">
-                    <img src="./imagens/<?php echo $dado['imagem_livro']; ?>">
-                    <div class="card-content">
-                        <h3><?php echo $dado["titulo_livro"];?></h3>
-                        <p>
-                            Autor: <?php echo $dado["autor_livro"]; ?><br>
-                            Quantidade: <?php echo $dado["qtd_livro"]; ?>
-                        </p>
+                <?php while ($dado = mysqli_fetch_assoc($result)) { ?>
+                    <div class="card-item">
+                        <img src="./imagens/<?php echo $dado['imagem_livro']; ?>">
+                        <div class="card-content">
+                            <h3><?php echo $dado["titulo_livro"]; ?></h3>
+                            <p>
+                                Autor: <?php echo $dado["autor_livro"]; ?><br>
+                                Quantidade: <?php echo $dado["qtd_livro"]; ?>
+                            </p>
+                        </div>
                     </div>
-                </div>
                 <?php } ?>
             </div>
         </div>
