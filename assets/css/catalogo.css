@@ -25,11 +25,6 @@ body::before {
     height: 40px;
 }
 
-#logo {
-    width: 120px;
-    height: 40px;
-}
-
 #pesq{
     display: flex;
     width: 100%;
@@ -55,6 +50,7 @@ body::before {
 .catalog {
     width: 100%;
     padding: 100px;
+    padding-top: 0px;
 }
 
 .card-wrapper {
