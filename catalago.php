@@ -3,12 +3,7 @@
     $sql = "SELECT * FROM cadlivro";
     $result = $con->query($sql);
 
-    if(!empty($_GET['search'])){
-        $data = $_GET['search'];
-        $sql = "SELECT * FROM cadlivro WHERE  titulo_livro '%data' or autor_livro '%data' or qtd_livro '%data' or imagem_livro '%data'";
-    }else{
-        $sql = "SELECT * FROM cadlivro";
-    }
+    
 ?>
 
 <!DOCTYPE html>
@@ -116,16 +111,6 @@
             </div>
         </div>
     </section>
-    
-    <script>
-        var search = document.getElementById('pesquisar');
-
-        search.addEventListener("keydown", function(event){
-            if 
-        }
-    </script>
-
-
 </body>
 
 </html>
