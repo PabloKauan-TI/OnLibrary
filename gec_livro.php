@@ -1,7 +1,13 @@
 <?php 
     include("assets/php/config.php"); 
-    $sql = "SELECT * FROM cadlivro";
-    $result = $con->query($sql);
+    if(empty($_POST['pesquisar'])){
+        $sql= "SELECT * FROM cadlivro";
+        $result= mysqli_query($con,$sql);
+    }else if($_POST['pesquisar']){
+        $nome = $_POST['pesquisar'];
+        $sql= "SELECT * FROM cadlivro WHERE titulo_livro LIKE '%$nome%' ";
+        $result= mysqli_query($con,$sql);
+    }
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +22,7 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/fuctions.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -80,6 +87,17 @@
             </div>
         </div>
     </nav>
+
+    <div id="pesq">
+        <form action="catalago.php" method="post">
+            <div class="col">
+                <div class="input-group mb-3">
+                    <input type="search" class="form-control" placeholder="Todos os livros..." name="pesquisar">
+                    <button class="btn btn-secondary" type="submit" id="pesquisar"><i class="bi bi-search"></i></button>
+                </div>
+            </div>
+        </form>
+    </div>
 
     <section class="catalog" id="catalog">
         <div class="content">
