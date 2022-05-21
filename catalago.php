@@ -1,9 +1,13 @@
 <?php
 include("assets/php/config.php");
-$sql = "SELECT * FROM cadlivro";
-$result = $con->query($sql);
-
-
+if(empty($_POST['pesquisar'])){
+    $sql= "SELECT * FROM cadlivro";
+    $result= mysqli_query($con,$sql);
+}else if($_POST['pesquisar']){
+    $nome = $_POST['pesquisar'];
+    $sql= "SELECT * FROM cadlivro WHERE titulo_livro LIKE '%$nome%' ";
+    $result= mysqli_query($con,$sql);
+}
 ?>
 
 <!DOCTYPE html>
@@ -86,7 +90,7 @@ $result = $con->query($sql);
         <form action="catalago.php" method="post">
             <div class="col">
                 <div class="input-group mb-3">
-                    <input type="search" class="form-control" placeholder="Buscar" name="pesquisar">
+                    <input type="search" class="form-control" placeholder="Todos os livros..." name="pesquisar">
                     <button class="btn btn-secondary" type="submit" id="pesquisar"><i class="bi bi-search"></i></button>
                 </div>
             </div>
