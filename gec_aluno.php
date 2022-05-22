@@ -90,7 +90,7 @@ if (empty($_POST['pesquisar'])) {
     </nav>
 
     <div id="pesq">
-        <form action="catalago.php" method="post">
+        <form action="gec_aluno.php" method="post">
             <div class="col">
                 <div class="input-group mb-3">
                     <input type="search" class="form-control" placeholder="Todos os alunos..." name="pesquisar">
@@ -107,7 +107,7 @@ if (empty($_POST['pesquisar'])) {
                     <th scope="col">NOME</th>
                     <th scope="col">SÉRIE</th>
                     <th scope="col">TURMA</th>
-                    <th scope="col" id="op">OPÇÕES</th>
+                    <th scope="col">OPÇÕES</th>
                 </thead>
                 <?php while ($dado = mysqli_fetch_assoc($result)) { ?>
                     <tbody>
@@ -115,8 +115,8 @@ if (empty($_POST['pesquisar'])) {
                         <th><?php echo $dado['serie_aluno']; ?></th>
                         <th><?php echo $dado['curso_aluno']; ?></th>
                         <th>
-                            <button class="btn btn-secondary"><a href="alt_livro.php?matricula_aluno=<?php echo $dado['matricula_aluno']; ?>"><img src="assets/css/escrever.png"></a></button>
-                            <button class="btn btn-secondary"><a href="assets/php/delete_livro.php?matricula_aluno=<?php echo $dado['matricula_aluno']; ?>"><img src="assets/css/excluir.png"></a></button>
+                            <button class="btn btn-secondary"><a href="alt_aluno.php?matricula_aluno=<?php echo $dado['matricula_aluno']; ?>"><img src="assets/css/escrever.png"></a></button>
+                            <button class="btn btn-secondary"><a href="assets/php/delete_aluno.php?matricula_aluno=<?php echo $dado['matricula_aluno']; ?>"><img src="assets/css/excluir.png"></a></button>
                         </th>
                     </tbody>
                 <?php } ?>

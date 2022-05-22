@@ -89,7 +89,7 @@
     </nav>
 
     <div id="pesq">
-        <form action="catalago.php" method="post">
+        <form action="gec_livro.php" method="post">
             <div class="col">
                 <div class="input-group mb-3">
                     <input type="search" class="form-control" placeholder="Todos os livros..." name="pesquisar">
