@@ -11,11 +11,12 @@
         $email = $_POST["email_aluno"];
         $senha = $_POST["senha_aluno"];
 
-        $sql = "UPDATE INTO cadaluno SET nome_aluno='$nome', ";
+        $sql = "UPDATE cadaluno SET nome_aluno='$nome', email_aluno = '$email', senha_aluno='$senha', telefone_aluno='$telefone', endereco_aluno='$endereco', curso_aluno='$curso', serie_aluno='$serie' WHERE matricula_aluno={$matricula}";
+        $result = mysqli_query($con, $sql);
 
-        if ($con->query($sql) === TRUE) {
+        if ($result === TRUE) {
             echo "Novo cadastro realizado com sucesso! <br>"; 
-            header("location: ../gec_aluno.php");
+            header("location: /onlibrary/gec_aluno.php");
         } else {
             echo "Erro" . $sql . ' ' . $con->connect_error;
         }

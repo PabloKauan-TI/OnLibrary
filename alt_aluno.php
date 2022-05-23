@@ -95,7 +95,7 @@
                         <div class="col">
                             <label for="serie_aluno" class="form-label">Série</label>
                             <select name="serie_aluno" class="form-select">
-                                <option selected>value="<?php echo $dado['serie_aluno'] ?>"</option>
+                                <option selected><?php echo $dado['serie_aluno'] ?></option>
                                 <option value="1º">1º</option>
                                 <option value="2º">2º</option>
                                 <option value="3º">3º</option>
@@ -104,7 +104,7 @@
                         <div class="col">
                             <label for="curso_aluno" class="form-label">Curso</label>
                             <select name="curso_aluno" class="form-select">
-                                <option selected>value="<?php echo $dado['curso_aluno'] ?>"</option>
+                                <option selected><?php echo $dado['curso_aluno'] ?></option>
                                 <option value="Enfermagem">Enfermagem</option>
                                 <option value="Informática">Informática</option>
                                 <option value="Administração">Administração</option>
