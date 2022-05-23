@@ -11,13 +11,9 @@ CREATE TABLE cadbibliotecaria (
 );
 
 CREATE TABLE cadaluno (
-    id_aluno INT AUTO_INCREMENT  PRIMARY KEY,
-    matricula_aluno VARCHAR(11),
+    matricula_aluno INT(11) AUTO_INCREMENT  PRIMARY KEY,
     nome_aluno VARCHAR(50),
-    email_aluno VARCHAR(50),
     senha_aluno VARCHAR(50),
-    telefone_aluno VARCHAR(50),
-    endereco_aluno VARCHAR(50),
     curso_aluno VARCHAR(50),
     serie_aluno VARCHAR(50)
 );
