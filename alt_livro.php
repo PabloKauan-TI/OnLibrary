@@ -1,11 +1,4 @@
-<?php 
-	include 'assets/php/config.php';
-    $id = $_GET['cod_livro'];
-    $result = mysqli_query($con, "SELECT FROM cdalivro WHERE cod_livro = $id");
-    while($dado = mysqli_fetch_assoc($result)){
-?>
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -71,40 +64,56 @@
     <div class="form">
         <div class="container">
             <fieldset>
-                <legend>Cadastrar Livro</legend>
-                <form method="post" enctype="multipart/form-data">
-                    <div class="row">
-                        <div class="col-9">
-                            <label for="titulo_livro" class="form-label">Nome</label>
-                            <input type="text" name="titulo_livro" class="form-control" value="<?php echo $dado['titulo_livro']; ?>">
+                <legend>Editar Livro</legend>
+                <?php
+
+                require_once 'assets/php/config.php';
+
+                if ($_GET['cod_livro']) {
+                    $cod_livro = $_GET['cod_livro'];
+
+                    $sql = "SELECT * FROM cadlivro WHERE cod_livro = {$cod_livro}";
+                    $result = $con->query($sql);
+
+                    $dado = $result->fetch_assoc();
+
+                    $con->close();
+
+                ?>
+                    <form action="assets/php/edit_livro.php" method="post" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col">
+                                <input type="hidden" name="cod_livro" value="<?php echo $dado['cod_livro'] ?>" />
+
+                                <label for="titulo_livro" class="form-label">Nome</label>
+                                <input type="text" name="titulo_livro" class="form-control" placeholder="" value="<?php echo $dado['titulo_livro'] ?>">
+                            </div>
                         </div>
-                        <div class="col-3">
-                            <label for="codigo_livro" class="form-label">Código</label>
-                            <input type="text" name="cod_livro" class="form-control" value="<?php echo $dado['cod_livro']; ?>">
+                        <div class="row">
+                            <div class="col-9">
+                                <label for="autor_livro" class="form-label">Autor</label>
+                                <input type="text" name="autor_livro" class="form-control" placeholder="" value="<?php echo $dado['autor_livro'] ?>">
+                            </div>
+                            <div class="col-3">
+                                <label for="qtd_livro" class="form-label">Quantidade</label>
+                                <input type="text" name="qtd_livro" class="form-control" placeholder="" value="<?php echo $dado['qtd_livro'] ?>">
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-9">
-                            <label for="autor_livro" class="form-label">Autor</label>
-                            <input type="text" name="autor_livro" class="form-control" value="<?php echo $dado['autor_livro']; ?>">
+                        <div class="row">
+                            <div class="col">
+                                <label for="imagem_livro" class="form-label">Capa</label>
+                                <input type="file" name="imagem_livro" class="form-control" placeholder="" value="<?php echo $dado['imagem_livro'] ?>">
+                            </div>
                         </div>
-                        <div class="col-3">
-                            <label for="qtd_livro" class="form-label">Quantidade</label>
-                            <input type="text" name="qtd_livro" class="form-control" value="<?php echo $dado['qtd_livro']; ?>">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <label for="imagem_livro" class="form-label">Capa</label>
-                            <input type="file" name="imagem_livro" class="form-control" value="<?php echo $dado['imagem_livro']; ?>">
-                        </div>
-                    </div>
-                    <?php } ?>
-                    <button type="post" name="submit">Cadastrar</button>
-                </form>
+                        <button type="submit" name="submit">Editar</button>
+                    </form>
             </fieldset>
         </div>
     </div>
 </body>
 
 </html>
+
+<?php
+                }
+?>

@@ -1,13 +1,14 @@
-<?php 
-    include("assets/php/config.php"); 
-    if(empty($_POST['pesquisar'])){
-        $sql= "SELECT * FROM cadlivro";
-        $result= mysqli_query($con,$sql);
-    }else if($_POST['pesquisar']){
-        $nome = $_POST['pesquisar'];
-        $sql= "SELECT * FROM cadlivro WHERE titulo_livro LIKE '%$nome%' ";
-        $result= mysqli_query($con,$sql);
-    }
+<?php
+include("assets/php/config.php");
+
+if (empty($_POST['pesquisar'])) {
+    $sql = "SELECT * FROM cadaluno";
+    $result = mysqli_query($con, $sql);
+} else if ($_POST['pesquisar']) {
+    $nome = $_POST['pesquisar'];
+    $sql = "SELECT * FROM cadaluno WHERE nome_aluno LIKE '%$nome%' ";
+    $result = mysqli_query($con, $sql);
+}
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +19,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OnLibrary</title>
-    <link rel="stylesheet" href="assets/css/gec_livro.css">
+    <link rel="stylesheet" href="assets/css/gec_aluno.css">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/fuctions.js"></script>
@@ -89,10 +90,10 @@
     </nav>
 
     <div id="pesq">
-        <form action="gec_livro.php" method="post">
+        <form action="gec_aluno.php" method="post">
             <div class="col">
                 <div class="input-group mb-3">
-                    <input type="search" class="form-control" placeholder="Todos os livros..." name="pesquisar">
+                    <input type="search" class="form-control" placeholder="Todos os alunos..." name="pesquisar">
                     <button class="btn btn-secondary" type="submit" id="pesquisar"><i class="bi bi-search"></i></button>
                 </div>
             </div>
@@ -100,25 +101,26 @@
     </div>
 
     <section class="catalog" id="catalog">
-        <div class="content">
-            <div class="card-wrapper">
-                <?php while($dado = mysqli_fetch_assoc($result)){ ?>
-                <div class="card-item">
-                    <img src="./imagens/<?php echo $dado['imagem_livro']; ?>">
-                    <div class="card-content">
-                        <h3 id="titulo"><?php echo $dado["titulo_livro"];?></h3>
-                        <p>
-                            Autor: <?php echo $dado["autor_livro"]; ?><br>
-                            Quantidade: <?php echo $dado["qtd_livro"]; ?>
-                        </p>
-                    </div>
-                    <div class="card-btn">
-                        <button class="btn btn-secondary"><a href='editar_livro.php?cod_livro=".$dado['cod_livro']."'><img src="assets/css/escrever.png"></a></button>
-                        <button class="btn btn-secondary"><a href="assets/php/delete_livro.php?cod_livro=<?php echo $dado['cod_livro']; ?>"><img src="assets/css/excluir.png"></a></button>
-                    </div>
-                </div>
+        <div class="border">
+            <table class="table table-dark">
+                <thead>
+                    <th scope="col">NOME</th>
+                    <th scope="col">SÉRIE</th>
+                    <th scope="col">TURMA</th>
+                    <th scope="col">OPÇÕES</th>
+                </thead>
+                <?php while ($dado = mysqli_fetch_assoc($result)) { ?>
+                    <tbody>
+                        <th><?php echo $dado['nome_aluno']; ?></th>
+                        <th><?php echo $dado['serie_aluno']; ?></th>
+                        <th><?php echo $dado['curso_aluno']; ?></th>
+                        <th>
+                            <button class="btn btn-secondary"><a href="alt_aluno.php?matricula_aluno=<?php echo $dado['matricula_aluno']; ?>"><img src="assets/css/escrever.png"></a></button>
+                            <button class="btn btn-secondary"><a href="assets/php/delete_aluno.php?matricula_aluno=<?php echo $dado['matricula_aluno']; ?>"><img src="assets/css/excluir.png"></a></button>
+                        </th>
+                    </tbody>
                 <?php } ?>
-            </div>
+            </table>
         </div>
     </section>
 

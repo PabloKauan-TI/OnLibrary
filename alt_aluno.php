@@ -64,67 +64,76 @@
     <div class="form">
         <div class="container">
             <fieldset>
-                <legend>Cadastrar Livro</legend>
+                <legend>Editar Aluno</legend>
                 <?php
 
                 require_once 'assets/php/config.php';
 
+                if ($_GET['matricula_aluno']) {
+                    $aluno = $_GET['matricula_aluno'];
 
-                if (isset($_POST['submit'])) {                    
-                    $titulo_livro = $_POST['titulo_livro'];
-                    $autor_livro = $_POST['autor_livro'];
-                    $qtd_livro = $_POST['qtd_livro'];
+                    $sql = "SELECT * FROM cadaluno WHERE matricula_aluno = {$aluno}";
+                    $result = $con->query($sql);
 
-                    $arquivo = $_FILES['imagem_livro']['name'];
-                    $extensao = strtolower(pathinfo($arquivo, PATHINFO_EXTENSION));
-
-                    $novo_nome = md5(time()).".".$extensao;
-
-                    $diretorio = "./imagens/"; 
-
-                    move_uploaded_file($_FILES['imagem_livro']['tmp_name'], $diretorio.$novo_nome);
-
-                    $sql = "INSERT INTO cadlivro VALUES(NULL,'$titulo_livro', '$autor_livro', '$qtd_livro', '$novo_nome')";
-
-                    if ($con->query($sql) === TRUE) {
-                        echo "Novo cadastro realizado com sucesso! <br>";
-                    } else {
-                        echo "Erro" . $sql . ' ' . $con->connect_error;
-                    }
-
-                    
+                    $dado = $result->fetch_assoc();
 
                     $con->close();
-                }
+
                 ?>
-                <form action="cad_livro.php" method="post" enctype="multipart/form-data">
-                    <div class="row">
-                        <div class="col">
-                            <label for="titulo_livro" class="form-label">Nome</label>
-                            <input type="text" name="titulo_livro" class="form-control" placeholder="">
-                        </div>
-                        <!-- <div class="col-3">
-                            <label for="codigo_livro" class="form-label">Código</label>
-                            <input type="text" name="cod_livro" class="form-control" placeholder="">
-                        </div> -->
-                    </div>
+                     <form action="assets/php/edit_aluno.php" method="post">
                     <div class="row">
                         <div class="col-9">
-                            <label for="autor_livro" class="form-label">Autor</label>
-                            <input type="text" name="autor_livro" class="form-control" placeholder="">
+                            <label for="nome_aluno" class="form-label">Nome</label>
+                            <input type="text" name="nome_aluno" class="form-control" placeholder="" value="<?php echo $dado['nome_aluno'] ?>">
                         </div>
                         <div class="col-3">
-                            <label for="qtd_livro" class="form-label">Quantidade</label>
-                            <input type="text" name="qtd_livro" class="form-control" placeholder="">
+                            <label for="matricula_aluno" class="form-label">Matrícula</label>
+                            <input type="text" name="matricula_aluno" class="form-control" placeholder="" value="<?php echo $dado['matricula_aluno'] ?>">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <label for="imagem_livro" class="form-label">Capa</label>
-                            <input type="file" name="imagem_livro" class="form-control" placeholder="">
+                            <label for="serie_aluno" class="form-label">Série</label>
+                            <select name="serie_aluno" class="form-select">
+                                <option selected>value="<?php echo $dado['serie_aluno'] ?>"</option>
+                                <option value="1º">1º</option>
+                                <option value="2º">2º</option>
+                                <option value="3º">3º</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label for="curso_aluno" class="form-label">Curso</label>
+                            <select name="curso_aluno" class="form-select">
+                                <option selected>value="<?php echo $dado['curso_aluno'] ?>"</option>
+                                <option value="Enfermagem">Enfermagem</option>
+                                <option value="Informática">Informática</option>
+                                <option value="Administração">Administração</option>
+                                <option value="Comércio">Comércio</option>
+                            </select>
                         </div>
                     </div>
-                    <button type="submit" name="submit">Cadastrar</button>
+                    <div class="row">
+                        <div class="col">
+                            <label for="endereco_aluno" class="form-label">Endereço</label>
+                            <input type="text" name="endereco_aluno" class="form-control" placeholder="" value="<?php echo $dado['endereco_aluno'] ?>">
+                        </div>
+                        <div class="col">
+                            <label for="telefone_aluno" class="form-label">Telefone</label>
+                            <input type="text" name="telefone_aluno" class="form-control" placeholder="" value="<?php echo $dado['telefone_aluno'] ?>">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="email_aluno" class="form-label">E-mail</label>
+                            <input type="email" name="email_aluno" class="form-control" placeholder="" value="<?php echo $dado['email_aluno'] ?>">
+                        </div>
+                        <div class="col">
+                            <label for="senha_aluno" class="form-label">Senha</label>
+                            <input type="password" name="senha_aluno" class="form-control" placeholder="" value="<?php echo $dado['senha_aluno'] ?>">
+                        </div>
+                    </div>
+                    
+                    <button type="submit">Cadastrar</button>
                 </form>
             </fieldset>
         </div>
@@ -133,3 +142,6 @@
 
 </html>
 
+<?php
+                }
+?>
