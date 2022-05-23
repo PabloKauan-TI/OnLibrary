@@ -113,7 +113,7 @@
                         </p>
                     </div>
                     <div class="card-btn">
-                        <button class="btn btn-secondary"><a href='editar_livro.php?cod_livro=".$dado['cod_livro']."'><img src="assets/css/escrever.png"></a></button>
+                        <button class="btn btn-secondary"><a href="alt_livro.php?cod_livro=<?php echo $dado['cod_livro']; ?>"><img src="assets/css/escrever.png"></a></button>
                         <button class="btn btn-secondary"><a href="assets/php/delete_livro.php?cod_livro=<?php echo $dado['cod_livro']; ?>"><img src="assets/css/excluir.png"></a></button>
                     </div>
                 </div>
