@@ -6,15 +6,10 @@ if($_POST) {
 	$titulo_livro = $_POST['titulo_livro'];
 	$autor_livro = $_POST['autor_livro'];
 	$qtd_livro = $_POST['qtd_livro'];
-	$imagem_livro = $_FILES['imagem_livro'];
-	
-	$cod_livro = $_POST['cod_livro'];
-
 	$arquivo = $_FILES['imagem_livro']['name'];
 	$extensao = strtolower(pathinfo($arquivo, PATHINFO_EXTENSION));
 
 	$novo_nome = md5(time()).".".$extensao;
-
 	$diretorio = "./imagens/"; 
 
 	move_uploaded_file($_FILES['imagem_livro']['tmp_name'], $diretorio.$novo_nome);
