@@ -109,17 +109,19 @@ if (empty($_POST['pesquisar'])) {
                     <th scope="col">TURMA</th>
                     <th scope="col">OPÇÕES</th>
                 </thead>
-                <?php while ($dado = mysqli_fetch_assoc($result)) { ?>
-                    <tbody>
-                        <th><?php echo $dado['nome_aluno']; ?></th>
-                        <th><?php echo $dado['serie_aluno']; ?></th>
-                        <th><?php echo $dado['curso_aluno']; ?></th>
-                        <th>
-                            <button class="btn btn-secondary"><a href="alt_aluno.php?matricula_aluno=<?php echo $dado['matricula_aluno']; ?>"><img src="assets/css/escrever.png"></a></button>
-                            <button class="btn btn-secondary"><a href="assets/php/delete_aluno.php?matricula_aluno=<?php echo $dado['matricula_aluno']; ?>"><img src="assets/css/excluir.png"></a></button>
-                        </th>
-                    </tbody>
-                <?php } ?>
+                <tbody>    
+                    <?php while ($dado = mysqli_fetch_assoc($result)) { ?>
+                        <tr>
+                            <th><?php echo $dado['nome_aluno']; ?></th>
+                            <th><?php echo $dado['serie_aluno']; ?></th>
+                            <th><?php echo $dado['curso_aluno']; ?></th>
+                            <th>
+                                <button class="btn btn-secondary"><a href="alt_aluno.php?matricula_aluno=<?php echo $dado['matricula_aluno']; ?>"><img src="assets/css/escrever.png"></a></button>
+                                <button class="btn btn-secondary"><a href="assets/php/delete_aluno.php?matricula_aluno=<?php echo $dado['matricula_aluno']; ?>"><img src="assets/css/excluir.png"></a></button>
+                            </th>
+                        </tr>
+                    <?php } ?>
+                </tbody>
             </table>
         </div>
     </section>

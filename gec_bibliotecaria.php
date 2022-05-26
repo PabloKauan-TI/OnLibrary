@@ -27,7 +27,7 @@ if (empty($_POST['pesquisar'])) {
 </head>
 
 <body>
-<nav class="navbar navbar-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="" id="logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -109,8 +109,9 @@ if (empty($_POST['pesquisar'])) {
                     <th scope="col">TELEFONE</th>
                     <th scope="col">OPÇÕES</th>
                 </thead>
-                <?php while ($dado = mysqli_fetch_assoc($result)) { ?>
-                    <tbody>
+                <tbody>
+                    <?php while ($dado = mysqli_fetch_assoc($result)) { ?>
+                    <tr>
                         <th><?php echo $dado['nome_bibliotecaria']; ?></th>
                         <th><?php echo $dado['email_bibliotecaria']; ?></th>
                         <th><?php echo $dado['telefone_bibliotecaria']; ?></th>
@@ -118,8 +119,9 @@ if (empty($_POST['pesquisar'])) {
                             <button class="btn btn-secondary"><a href="alt_bibliotecaria.php?id_bibliotecaria=<?php echo $dado['id_bibliotecaria']; ?>"><img src="assets/css/escrever.png"></a></button>
                             <button class="btn btn-secondary"><a href="assets/php/delete_bibliotecaria.php?id_bibliotecaria=<?php echo $dado['id_bibliotecaria']; ?>"><img src="assets/css/excluir.png"></a></button>
                         </th>
-                    </tbody>
-                <?php } ?>
+                    </tr>
+                    <?php } ?>
+                </tbody>
             </table>
         </div>
     </section>
