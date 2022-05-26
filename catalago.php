@@ -40,7 +40,7 @@ if(empty($_POST['pesquisar'])){
                         <ul class="dropdown-menu  dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="catalogo.php">Catalago</a></li>
                             <li><a class="dropdown-item" href="cad_livro.php">Cadastrar</a></li>
-                            <li><a class="dropdown-item" href="#">Gerenciar</a></li>
+                            <li><a class="dropdown-item" href="gec_livro.php">Gerenciar</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -53,7 +53,7 @@ if(empty($_POST['pesquisar'])){
                         </a>
                         <ul class="dropdown-menu  dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="cad_emprestimolivro.php">Realizar</a></li>
-                            <li><a class="dropdown-item" href="#">Gerenciar</a></li>
+                            <li><a class="dropdown-item" href="gec_emprestimolivro.php">Gerenciar</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -66,7 +66,7 @@ if(empty($_POST['pesquisar'])){
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="cad_aluno.php">Cadastrar</a></li>
-                            <li><a class="dropdown-item" href="#">Gerenciar</a></li>
+                            <li><a class="dropdown-item" href="gec_aluno.php">Gerenciar</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -79,7 +79,7 @@ if(empty($_POST['pesquisar'])){
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="cad_bibliotecaria.php">Cadastrar</a></li>
-                            <li><a class="dropdown-item" href="#">Gerenciar</a></li>
+                            <li><a class="dropdown-item" href="gec_bibliotecaria.php">Gerenciar</a></li>
                         </ul>
                     </li>
                 </ul>

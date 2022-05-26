@@ -27,7 +27,7 @@ if (empty($_POST['pesquisar'])) {
 </head>
 
 <body>
-    <nav class="navbar navbar-lg navbar-dark bg-dark">
+<nav class="navbar navbar-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="" id="logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,7 +42,7 @@ if (empty($_POST['pesquisar'])) {
                         <ul class="dropdown-menu  dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="catalogo.php">Catalago</a></li>
                             <li><a class="dropdown-item" href="cad_livro.php">Cadastrar</a></li>
-                            <li><a class="dropdown-item" href="#">Gerenciar</a></li>
+                            <li><a class="dropdown-item" href="gec_livro.php">Gerenciar</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -55,7 +55,7 @@ if (empty($_POST['pesquisar'])) {
                         </a>
                         <ul class="dropdown-menu  dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="cad_emprestimolivro.php">Realizar</a></li>
-                            <li><a class="dropdown-item" href="#">Gerenciar</a></li>
+                            <li><a class="dropdown-item" href="gec_emprestimolivro.php">Gerenciar</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -68,7 +68,7 @@ if (empty($_POST['pesquisar'])) {
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="cad_aluno.php">Cadastrar</a></li>
-                            <li><a class="dropdown-item" href="#">Gerenciar</a></li>
+                            <li><a class="dropdown-item" href="gec_aluno.php">Gerenciar</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -81,7 +81,7 @@ if (empty($_POST['pesquisar'])) {
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="cad_bibliotecaria.php">Cadastrar</a></li>
-                            <li><a class="dropdown-item" href="#">Gerenciar</a></li>
+                            <li><a class="dropdown-item" href="gec_bibliotecaria.php">Gerenciar</a></li>
                         </ul>
                     </li>
                 </ul>
