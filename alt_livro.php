@@ -113,9 +113,8 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <label for="imagem_livro" class="form-label" value="<?php echo $dado['imagem_livro'] ?>">Capa</label><br>
-                                <!--<img src="./imagens/<?php echo $dado['imagem_livro'] ?>" style="width:150px;">
-                            -->
+                                <label for="imagem_livro" class="form-label" >Capa</label><br>
+                                
                                 <input type="file" name="imagem_livro" class="form-control">
                             </div>
                         </div>
