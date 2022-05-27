@@ -22,10 +22,11 @@
         <div class="container">
             <fieldset>
                 <legend>Login</legend>
+                <form action="assets/php/entrar.php" method="POST">
                     <div class="row">
                         <div class="col">
                             <label for="user" class="form-label">Usuário</label>
-                            <input type="email" name="euser" class="form-control" placeholder="">
+                            <input type="email" name="user" class="form-control" placeholder="">
                         </div>
                     </div>
                     <div class="row">
