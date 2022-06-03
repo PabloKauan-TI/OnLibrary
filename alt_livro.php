@@ -92,7 +92,7 @@
                     $con->close();
 
                 ?>
-                    <form action="assets/php/edit_livro.php?cod_livro=<?php echo $dado['cod_livro']; ?>" method="post" enctype="multipart/form-data">
+                    <form action="assets/php/edit_livro.php" method="post" enctype="multipart/form-data">
                         <div class="row">
                             <div class="col">
                                 <input type="hidden" name="cod_livro" value="<?php echo $dado['cod_livro'] ?>" />

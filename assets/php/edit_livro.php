@@ -10,30 +10,26 @@ if($_POST) {
 	$extensao = strtolower(pathinfo($arquivo, PATHINFO_EXTENSION));
 
 	$novo_nome = md5(time()).".".$extensao;
-	$diretorio = "../../imagens/"; 
-
-	$diretorio = '../../imagens/';
-	if (!is_dir($diretorio)) {
-    mkdir($diretorio, 0777, true);
-}
+	$diretorio = "./imagens/"; 
 
 	$cod_livro = $_POST['cod_livro'];
 
-	move_uploaded_file($_FILES["imagem_livro"]["tmp_name"], $diretorio . $novo_nome);
+	move_uploaded_file($_FILES['imagem_livro']['tmp_name'], $diretorio.$novo_nome);
 
 	$sql  = "UPDATE cadlivro SET titulo_livro = '$titulo_livro', autor_livro = '$autor_livro', qtd_livro = '$qtd_livro', imagem_livro = '$novo_nome' WHERE cod_livro = {$cod_livro}";
+	
 	if($con->query($sql) === TRUE) {
 
 		
-        
+  
 		header('location: /onlibrary/gec_livro.php');
 		
-			}
+			
 	} else {
 		echo "Erro : ". $con->error;
 	}
 
 	$con->close();
 
-?>
+}
 
