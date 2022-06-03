@@ -10,7 +10,7 @@ if($_POST) {
 	$extensao = strtolower(pathinfo($arquivo, PATHINFO_EXTENSION));
 
 	$novo_nome = md5(time()).".".$extensao;
-	$diretorio = "./imagens/"; 
+	$diretorio = "../../imagens/"; 
 
 	$cod_livro = $_POST['cod_livro'];
 

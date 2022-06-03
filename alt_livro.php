@@ -115,7 +115,7 @@
                             <div class="col">
                                 <label for="imagem_livro" class="form-label" >Capa</label><br>
                                 
-                                <input type="file" name="imagem_livro" class="form-control">
+                                <input type="file" name="imagem_livro" class="form-control" value="<?php echo $dado['imagem_livro'] ?>">
                             </div>
                         </div>
                         <button type="submit" name="submit">Editar</button>
