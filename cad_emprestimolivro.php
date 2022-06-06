@@ -108,14 +108,10 @@
                             <label for="titulo_livro" class="form-label">Livro</label>
                             <input type="text" name="titulo_livro" class="form-control" placeholder="">
                         </div>
-                        <div class="col-3">
-                            <label for="cod_livro" class="form-label">Código</label>
-                            <input type="text" name="titulo_livro" class="form-control" placeholder="">
-                        </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <label for="aluno" class="form-label">Aluno</label>
+                            <label for="matricula_aluno" class="form-label">Aluno</label>
                             <input type="text" name="matricula_aluno" class="form-control" placeholder="">
                         </div>
                     </div>
