@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OnLibrary</title>
-    <link rel="stylesheet" href="assets/css/cadastros.css">
+    <link rel="stylesheet" href="assets/css/cadastros_altlivro.css">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <script src="assets/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-<nav class="navbar navbar-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="" id="logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -73,6 +73,7 @@
             </div>
         </div>
     </nav>
+    
     <div class="form">
         <div class="container">
             <fieldset>
@@ -113,16 +114,16 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <label for="imagem_livro" class="form-label" >Capa</label><br>
-                                <img src="./imagens/<?php echo $dado['imagem_livro'];?>" style="width:150px;">
-                                <input type="file" name="imagem_livro" class="form-control" >
+                                <div id="capa">
+                                <img src="./imagens/<?php echo $dado['imagem_livro']; ?>" style="width:150px;">
+                                </div>
+                                <input type="file" name="imagem_livro" class="form-control">
                             </div>
                         </div>
                         <button type="submit" name="submit">Editar</button>
                     </form>
             </fieldset>
         </div>
-    </div>
 </body>
 
 </html>
