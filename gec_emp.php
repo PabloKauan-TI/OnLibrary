@@ -123,7 +123,7 @@ if (empty($_POST['pesquisar'])) {
                         <th><?php echo $dado['data_rec']; ?></th>
                         <th>
                             <button class="btn btn-secondary"><a href="alt_bibliotecaria.php?id_bibliotecaria=<?php echo $dado['id_bibliotecaria']; ?>"><img src="assets/css/escrever.png"></a></button>
-                            <button class="btn btn-secondary"><a href="assets/php/delete_bibliotecaria.php?id_bibliotecaria=<?php echo $dado['id_bibliotecaria']; ?>"><img src="assets/css/excluir.png"></a></button>
+                            <button class="btn btn-secondary"><a href="assets/php/delete_emp.php?cod_emp=<?php echo $dado['cod_emp']; ?>"><img src="assets/css/excluir.png"></a></button>
                         </th>
                     </tr>
                     <?php } ?>
