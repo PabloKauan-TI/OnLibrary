@@ -82,10 +82,16 @@
                 require_once 'assets/php/config.php';
                 if ($_POST) {
                     $titulo_livro = $_POST["titulo_livro"];
-                    $titulo_livro = $_POST["titulo_livro"];
+                    $aluno = $_POST["aluno"];
+                    $serie = $_POST["serie"];
+                    $curso = $_POST["curso"];
+                    $data_emp = $_POST["data_emp"];
+                    $data_rec = $_POST["data_rec"];
+
+                    $sql = "INSERT INTO emprestimolivro VALUES(NULL,'$titulo_livro', '$aluno', '$serie', '$curso', '$data_emp', '$data_rec')";
                     
                     if ($con->query($sql) === TRUE) {
-                        echo "Novo cadastro realizado com sucesso! <br>";
+                        echo "Empréstimo realizado com sucesso! <br>";
                     } else {
                         echo "Erro" . $sql . ' ' . $con->connect_error;
                     }
@@ -93,7 +99,7 @@
                     $con->close();
                 }
                 ?>
-                <form action="cad_aluno.php" method="post">
+                <form action="cad_emprestimolivro.php" method="post">
                     <div class="row">
                         <div class="col-9">
                             <label for="titulo_livro" class="form-label">Livro</label>
@@ -103,7 +109,7 @@
                     <div class="row">
                         <div class="col">
                             <label for="matricula_aluno" class="form-label">Aluno</label>
-                            <input type="text" name="matricula_aluno" class="form-control" placeholder="">
+                            <input type="text" name="aluno" class="form-control" placeholder="">
                         </div>
                     </div>
                     <div class="row">
