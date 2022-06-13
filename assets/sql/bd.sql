@@ -28,11 +28,11 @@ CREATE TABLE cadlivro (
 );
 
 CREATE TABLE emprestimolivro (
-    cod_livro INT AUTO_INCREMENT PRIMARY KEY,
+    cod_emp INT AUTO_INCREMENT PRIMARY KEY,
     titulo_livro VARCHAR(50),
     aluno VARCHAR(50),
     serie VARCHAR(50),
     curso VARCHAR(50),
     data_emp DATE,
-    situacao VARCHAR(50)
+    data_rec DATE
 );

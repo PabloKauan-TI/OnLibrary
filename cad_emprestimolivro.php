@@ -73,7 +73,6 @@
             </div>
         </div>
     </nav>
-
     <div class="form">
         <div class="container">
             <fieldset>
@@ -82,17 +81,8 @@
 
                 require_once 'assets/php/config.php';
                 if ($_POST) {
-                    $nome = $_POST["nome_aluno"];
-                    $curso = $_POST["curso_aluno"];
-                    $serie = $_POST["serie_aluno"];
-                    $matricula = $_POST["matricula_aluno"];
-                    $telefone = $_POST["telefone_aluno"];
-                    $endereco = $_POST["endereco_aluno"];
-                    $email = $_POST["email_aluno"];
-                    $senha = $_POST["senha_aluno"];
-
-                    $sql = "INSERT INTO cadaluno (matricula_aluno,nome_aluno, email_aluno, senha_aluno, telefone_aluno, endereco_aluno, curso_aluno, serie_aluno) VALUES('$matricula', '$nome', '$email', '$senha', '$telefone', '$endereco', '$curso', '$serie')";
-
+                    $titulo_livro = $_POST["titulo_livro"];
+                    
                     if ($con->query($sql) === TRUE) {
                         echo "Novo cadastro realizado com sucesso! <br>";
                     } else {
@@ -139,11 +129,11 @@
                     <div class="row">
                         <div class="col">
                             <label for="data_emp" class="form-label">Data de Empréstimo</label>
-                            <input type="date" name="titulo_livro" class="form-control" placeholder="">
+                            <input type="date" name="data_emp" class="form-control" placeholder="">
                         </div>
                         <div class="col">
-                            <label for="situacao" class="form-label">Situação</label>
-                            <input type="text" name="titulo_livro" class="form-control" placeholder="">
+                            <label for="data_rec" class="form-label">Data de Recebimento</label>
+                            <input type="date" name="data_rec" class="form-control" placeholder="">
                         </div>
                     </div>
                     <button type="submit">Cadastrar</button>
