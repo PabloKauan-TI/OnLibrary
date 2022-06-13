@@ -82,6 +82,7 @@
                 require_once 'assets/php/config.php';
                 if ($_POST) {
                     $titulo_livro = $_POST["titulo_livro"];
+                    $titulo_livro = $_POST["titulo_livro"];
                     
                     if ($con->query($sql) === TRUE) {
                         echo "Novo cadastro realizado com sucesso! <br>";
