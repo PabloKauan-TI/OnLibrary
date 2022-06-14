@@ -25,7 +25,7 @@
                             Livros
                         </a>
                         <ul class="dropdown-menu  dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="catalago.php">Catalago</a></li>
+                            <li><a class="dropdown-item" href="catalago.php">Catálogo</a></li>
                             <li><a class="dropdown-item" href="cad_livro.php">Cadastrar</a></li>
                             <li><a class="dropdown-item" href="gec_livro.php">Gerenciar</a></li>
                         </ul>
@@ -77,15 +77,15 @@
     <div class="form">
         <div class="container">
             <fieldset>
-                <legend>Editar Livro</legend>
+                <legend>Editar empréstimo</legend>
                 <?php
 
                 require_once 'assets/php/config.php';
 
-                if ($_GET['cod_livro']) {
-                    $cod_livro = $_GET['cod_livro'];
+                if ($_GET['cod_emp']) {
+                    $cod_emp = $_GET['cod_emp'];
 
-                    $sql = "SELECT * FROM cadlivro WHERE cod_livro = {$cod_livro}";
+                    $sql = "SELECT * FROM emprestimolivro WHERE cod_emp = {$cod_emp}";
                     $result = $con->query($sql);
 
                     $dado = $result->fetch_assoc();
@@ -93,35 +93,53 @@
                     $con->close();
 
                 ?>
-                    <form action="assets/php/edit_livro.php" method="post" >
-                        <div class="row">
-                            <div class="col">
-                                <input type="hidden" name="cod_livro" value="<?php echo $dado['cod_livro'] ?>" />
-
-                                <label for="titulo_livro" class="form-label">Nome</label>
-                                <input type="text" name="titulo_livro" class="form-control" placeholder="" value="<?php echo $dado['titulo_livro'] ?>">
-                            </div>
+                    <form action="assets/php/edit_emprestimo.php" method="post">
+                    <div class="row">
+                        <div class="col-9">
+                        <input type="hidden" name="cod_emp" value="<?php echo $dado['cod_emp'] ?>" />
+                            <label for="titulo_livro" class="form-label">Livro</label>
+                            <input type="text" name="titulo_livro" class="form-control" placeholder="" value="<?php echo $dado['titulo_livro'] ?>">
                         </div>
-                        <div class="row">
-                            <div class="col-9">
-                                <label for="autor_livro" class="form-label">Autor</label>
-                                <input type="text" name="autor_livro" class="form-control" placeholder="" value="<?php echo $dado['autor_livro'] ?>">
-                            </div>
-                            <div class="col-3">
-                                <label for="qtd_livro" class="form-label">Quantidade</label>
-                                <input type="text" name="qtd_livro" class="form-control" placeholder="" value="<?php echo $dado['qtd_livro'] ?>">
-                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="aluno" class="form-label">Aluno</label>
+                            <input type="text" name="aluno" class="form-control" placeholder="" value="<?php echo $dado['aluno'] ?>">
                         </div>
-                        <div class="row">
-                            <div class="col">
-                                <div id="capa">
-                                <img src="./imagens/<?php echo $dado['imagem_livro']; ?>" style="width:150px;">
-                                </div>
-                                <input type="file" name="imagem_livro" class="form-control">
-                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="serie" class="form-label">Série</label>
+                            <select name="serie" class="form-select">
+                                <option selected><?php echo $dado['serie'] ?></option>
+                                <option value="1º">1º</option>
+                                <option value="2º">2º</option>
+                                <option value="3º">3º</option>
+                            </select>
                         </div>
-                        <button type="submit" name="submit">Editar</button>
-                    </form>
+                        <div class="col">
+                            <label for="curso" class="form-label">Curso</label>
+                            <select name="curso" class="form-select">
+                                <option selected><?php echo $dado['curso'] ?></option>
+                                <option value="Enfermagem">Enfermagem</option>
+                                <option value="Informática">Informática</option>
+                                <option value="Administração">Administração</option>
+                                <option value="Comércio">Comércio</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="data_emp" class="form-label">Data de Empréstimo</label>
+                            <input type="date" name="data_emp" class="form-control" placeholder="" value="<?php echo $dado['data_emp'] ?>">
+                        </div>
+                        <div class="col">
+                            <label for="data_rec" class="form-label">Data de Recebimento</label>
+                            <input type="date" name="data_rec" class="form-control" placeholder="" value="<?php echo $dado['data_rec'] ?>">
+                        </div>
+                    </div>
+                    <button type="submit">Editar</button>
+                </form>
             </fieldset>
         </div>
 </body>

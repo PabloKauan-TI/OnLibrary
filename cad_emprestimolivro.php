@@ -141,6 +141,8 @@
                         <div class="col">
                             <label for="data_rec" class="form-label">Data de Recebimento</label>
                             <input type="date" name="data_rec" class="form-control" placeholder="">
+
+                            
                         </div>
                     </div>
                     <button type="submit">Cadastrar</button>
