@@ -55,7 +55,7 @@ if (empty($_POST['pesquisar'])) {
                         </a>
                         <ul class="dropdown-menu  dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="cad_emprestimolivro.php">Realizar</a></li>
-                            <li><a class="dropdown-item" href="gec_emprestimolivro.php">Gerenciar</a></li>
+                            <li><a class="dropdown-item" href="gec_emp.php">Gerenciar</a></li>
                         </ul>
                     </li>
                 </ul>
