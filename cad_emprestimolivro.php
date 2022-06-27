@@ -101,7 +101,7 @@
                 ?>
                 <form action="cad_emprestimolivro.php" method="post">
                     <div class="row">
-                        <div class="col-9">
+                        <div class="col">
                             <label for="titulo_livro" class="form-label">Livro</label>
                             <input type="text" name="titulo_livro" class="form-control" placeholder="">
                         </div>

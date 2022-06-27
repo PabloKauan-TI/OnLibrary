@@ -6,7 +6,7 @@ if (empty($_POST['pesquisar'])) {
     $result = mysqli_query($con, $sql);
 } else if ($_POST['pesquisar']) {
     $nome = $_POST['pesquisar'];
-    $sql = "SELECT * FROM emprestimolivro WHERE nome_aluno LIKE '%$nome%' ";
+    $sql = "SELECT * FROM emprestimolivro WHERE aluno LIKE '%$nome%' ";
     $result = mysqli_query($con, $sql);
 }
 ?>
