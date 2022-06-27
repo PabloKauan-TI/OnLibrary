@@ -25,7 +25,7 @@
                             Livros
                         </a>
                         <ul class="dropdown-menu  dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="catalago.php">Catálago</a></li>
+                            <li><a class="dropdown-item" href="catalago.php">Catálogo</a></li>
                             <li><a class="dropdown-item" href="cad_livro.php">Cadastrar</a></li>
                             <li><a class="dropdown-item" href="gec_livro.php">Gerenciar</a></li>
                         </ul>
@@ -36,7 +36,7 @@
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Emprestimos
+                            Empréstimos
                         </a>
                         <ul class="dropdown-menu  dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="cad_emprestimolivro.php">Realizar</a></li>

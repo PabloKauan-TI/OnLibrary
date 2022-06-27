@@ -39,7 +39,7 @@
                             Livros
                         </a>
                         <ul class="dropdown-menu  dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="catalago.php">Catalago</a></li>
+                            <li><a class="dropdown-item" href="catalago.php">Catálogo</a></li>
                             <li><a class="dropdown-item" href="cad_livro.php">Cadastrar</a></li>
                             <li><a class="dropdown-item" href="gec_livro.php">Gerenciar</a></li>
                         </ul>
