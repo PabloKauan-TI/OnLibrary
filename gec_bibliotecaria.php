@@ -6,7 +6,7 @@ if (empty($_POST['pesquisar'])) {
     $result = mysqli_query($con, $sql);
 } else if ($_POST['pesquisar']) {
     $nome = $_POST['pesquisar'];
-    $sql = "SELECT * FROM cadaluno WHERE nome_bibliotecaria LIKE '%$nome%' ";
+    $sql = "SELECT * FROM cadbibliotecaria WHERE nome_bibliotecaria LIKE '%$nome%' ";
     $result = mysqli_query($con, $sql);
 }
 ?>
@@ -90,7 +90,7 @@ if (empty($_POST['pesquisar'])) {
     </nav>
 
     <div id="pesq">
-        <form action="gec_biblioteccaria.php" method="post">
+        <form action="gec_bibliotecaria.php" method="post">
             <div class="col">
                 <div class="input-group mb-3">
                     <input type="search" class="form-control" placeholder="Todos os alunos..." name="pesquisar">
